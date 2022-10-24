@@ -1,11 +1,13 @@
 .contactsBlock {
-    height: 100vh;
+    padding-bottom: 70px;
     background-color: #bd969c;
 }
 
 .contactsContainer {
     display: flex;
     flex-direction: column;
+    padding-bottom: 30px;
+
 }
 
 
@@ -21,7 +23,13 @@
     border: 1px solid black;
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 50%;
+}
+
+@media screen and (max-width: 500px) {
+    .form {
+        width: 100%;
+    }
 }
 
 .input {

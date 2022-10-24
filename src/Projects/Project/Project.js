@@ -6,9 +6,9 @@ function Project(props) {
     return (
         <div className={style.project}>
             <div className={style.icon}>
-                <button className={style.btn}>See</button>
+                <a className={style.seeBtn}>See</a>
             </div>
-            <h4>{ props.title }</h4>
+            <h4 className={style.projectTitle}>{ props.title }</h4>
             <span className={style.description}>{ props.projectDescription}</span>
         </div>
     );

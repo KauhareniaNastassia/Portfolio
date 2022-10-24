@@ -4,3 +4,22 @@
     display: flex;
     justify-content: space-between;
 }
+
+
+/*
+.nav {
+    grid-area: n;
+    background-color: #FFBC8B;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.item a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.item a.activeLink {
+    color: #ED5C1D;
+}*/

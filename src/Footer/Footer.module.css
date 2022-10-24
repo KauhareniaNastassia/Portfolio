@@ -1,6 +1,7 @@
 .footerBlock {
     height: 250px;
     background-color: #e1c6ca;
+
 }
 
 .footerContainer {
@@ -21,7 +22,7 @@
 .footerIcons {
     border: 1px solid black;
     display: flex;
-    width: 320px;
+    width: 280px;
     justify-content: space-between;
 }
 

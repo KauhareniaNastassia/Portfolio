@@ -6,17 +6,23 @@ import Projects from "./Projects/Projects";
 import RemoteWork from "./RemoteWork/RemoteWork";
 import Contacts from "./Contacts/Contacts";
 import Footer from "./Footer/Footer";
+import Nav from "./Nav/Nav";
 
 function App() {
     return (
-        <div className="App">
-            <Header/>
-            <Main />
-            <Skills />
-            <Projects />
-            <RemoteWork />
-            <Contacts />
-            <Footer />
+        <div className="app-wrapper">
+             <Header/>
+
+           {/* <Nav/>*/}
+
+                <Main/>
+                <Skills/>
+                <Projects/>
+                <RemoteWork/>
+                <Contacts/>
+                <Footer/>
+
+
         </div>
     );
 }
