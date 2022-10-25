@@ -1,5 +1,5 @@
 .projectsBlock {
-    background-color: #c0858f;
+    background-color: #fff7f7;
     padding: 100px 0;
 }
 
@@ -10,46 +10,12 @@
 }
 
 .projects {
-    border: 1px solid black;
     width: 100%;
     display: flex;
+
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
-
-.title {
-    margin: 0 0 30px;
-    font-family: poppins;
-   position: relative;
-    font-weight: 500;
-    letter-spacing: 7px;
-    color: #333;
-    text-transform: uppercase;
-
-    font-size: 24px;
-    line-height: 1.7;
-
-}
-
-.title h2 {
-    margin: 0;
-}
-
-.title::after {
-    position: absolute;
-    content: "";
-    width: 700px;
-    height: 1px;
-    background-color: #7d7789;
-    left: 100px;
-    top: 100%;
-    transform: translate(-50%);
-
-}
-
-
-
 
 @media screen and (max-width: 1130px) {
     .projects {
