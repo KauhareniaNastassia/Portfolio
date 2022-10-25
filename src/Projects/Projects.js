@@ -1,5 +1,5 @@
 import React from 'react'
-import style from './Projects.module.css'
+import style from './Projects.module.scss'
 import projectsContainer from './../Common/Styles/Container.module.css'
 import Project from "./Project/Project";
 import Title from "../Common/Components/Title/Title";
@@ -20,7 +20,6 @@ function Projects() {
         <div className={style.projectsBlock}>
 
 
-
             <div className={`${style.projectsContainer} ${projectsContainer.container}`}>
 
                 <Title text={'Projects'}/>
@@ -33,7 +32,8 @@ function Projects() {
 
                     <Project
                         style={todolist}
-                        title={"Todolist"} projectDescription={"Bla-bla-bla-bla-Bla-bla-bla-bla-Bla-bla-bla-Bla-bla-bla-bla-Bla-bla-bla-bla-Bla-bla-bla-bla"}/>
+                        title={"Todolist"}
+                        projectDescription={"Bla-bla-bla-bla-Bla-bla-bla-bla-Bla-bla-bla-Bla-bla-bla-bla-Bla-bla-bla-bla-Bla-bla-bla-bla"}/>
 
                 </div>
 

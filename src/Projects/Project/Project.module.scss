@@ -1,0 +1,85 @@
+@import "../../Common/Styles/SASS/Variables";
+
+.project {
+    width: 450px;
+    position: relative;
+    border: 1px solid $lineColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+    transition: all .3s ease;
+    padding: 20px;
+
+    .image {
+        height: 200px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            background-color: black;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0.4;
+        }
+
+        .seeBtn {
+            text-decoration: none;
+            color: $textColorBTN;
+            display: inline-block;
+            background-color: #333;
+            padding: 18px 28px;
+            line-height: 6px;
+            text-transform: none;
+            border: 2px solid #333;
+            font-family: Poppins;
+            font-weight: 500;
+            font-size: 16px;
+            position: relative;
+            z-index: 1;
+
+            @media (max-width: 1600px) {
+                padding: 15px 22px;
+            }
+        }
+    }
+    .projectTitle {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        color: $textTitleColor;
+        margin: 0 0 5px;
+        line-height: 1.2;
+    }
+    .description {
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        color: $textDescriptionColor;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
