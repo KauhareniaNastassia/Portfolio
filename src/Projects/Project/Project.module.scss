@@ -1,4 +1,6 @@
 @import "../../Common/Styles/SASS/Variables";
+@import "../../Common/Styles/Mixins/Mixins";
+
 
 .project {
     width: 450px;
@@ -44,7 +46,7 @@
             line-height: 6px;
             text-transform: none;
             border: 2px solid #333;
-            font-family: Poppins;
+            font-family: $font;
             font-weight: 500;
             font-size: 16px;
             position: relative;
@@ -56,16 +58,15 @@
         }
     }
     .projectTitle {
-        font-family: 'Poppins', sans-serif;
+        @include text($font, 20px, 1.2 );
+
         font-weight: 500;
-        font-size: 20px;
         color: $textTitleColor;
         margin: 0 0 5px;
-        line-height: 1.2;
+
     }
     .description {
-        font-family: 'Poppins', sans-serif;
-        font-size: 14px;
+        @include text($font, 14px, 1.2);
         font-weight: 400;
         color: $textDescriptionColor;
         width: 100%;
