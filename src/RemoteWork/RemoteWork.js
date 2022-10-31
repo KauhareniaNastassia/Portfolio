@@ -1,6 +1,6 @@
-import React from 'react'
-import style from './RemoteWork.module.css'
-import remoteWorkContainer from "../Common/Styles/Container.module.css";
+import style from './RemoteWork.module.scss'
+import remoteWorkContainer from "../Common/Styles/Container.module.scss";
+import Button from "../Common/Components/Button/Button";
 
 
 function RemoteWork() {
@@ -8,7 +8,7 @@ function RemoteWork() {
         <div className={style.remoteWorkBlock}>
             <div className={`${style.remoteWorkContainer} ${remoteWorkContainer.container}`}>
                 <h2 className={style.title}>I am considering options for remote work</h2>
-                <button className={style.btn}>Hire me</button>
+                <Button text={'Hire me'}/>
             </div>
         </div>
     );

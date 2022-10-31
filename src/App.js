@@ -1,28 +1,27 @@
-import './App.css';
+import style from './App.module.scss'
 import Header from "./Header/Header";
 import Main from "./Main/Main";
-import Skills from "./Skills/Skills";
+import About from "./Skills/About";
 import Projects from "./Projects/Projects";
-import RemoteWork from "./RemoteWork/RemoteWork";
 import Contacts from "./Contacts/Contacts";
-import Footer from "./Footer/Footer";
-import Nav from "./Nav/Nav";
+import Photo from "./Photo/Photo";
 
 function App() {
     return (
-        <div className="app-wrapper">
-             <Header/>
+        <div className={style.appWrapper}>
+            <Header/>
+            <Photo/>
 
-           {/* <Nav/>*/}
+            <div className={style.appWrapperContent}>
 
                 <Main/>
-                <Skills/>
+                <About/>
                 <Projects/>
-                <RemoteWork/>
+
                 <Contacts/>
-                <Footer/>
+                {/*<Footer/>*/}
 
-
+            </div>
         </div>
     );
 }

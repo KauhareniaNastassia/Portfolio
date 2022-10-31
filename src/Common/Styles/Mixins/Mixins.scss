@@ -1,8 +1,9 @@
 @import "./src/Common/Styles/SASS/Variables";
 
 
-@mixin text($fonFamily, $fontSize, $lineHeight) {
+@mixin text($fonFamily, $fontSize, $lineHeight, $fontWeight) {
   font-family: $fonFamily;
   font-size: $fontSize;
   line-height: $lineHeight;
+  font-weight: $fontWeight
 }
