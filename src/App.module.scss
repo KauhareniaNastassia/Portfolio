@@ -1,0 +1,26 @@
+@import "Common/Styles/SASS/Variables";
+
+.appWrapper {
+  display: grid;
+  margin: 0 100px;
+  grid-template-areas:
+        'h h'
+        'n c';
+  grid-template-rows: 50px 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 10px;
+  overflow: auto;
+
+  .appWrapperContent {
+    grid-area: c;
+    background-color: $backgroundColor;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+

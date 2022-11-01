@@ -1,4 +1,3 @@
-import React from 'react'
 import style from './Main.module.scss'
 import styleContainer from '../Common/Styles/Container.module.scss'
 
@@ -16,5 +15,6 @@ function Main() {
         </div>
     );
 }
+
 
 export default Main;

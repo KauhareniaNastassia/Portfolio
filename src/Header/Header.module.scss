@@ -1,0 +1,51 @@
+@import "../Common/Styles/SASS/Variables.scss";
+@import "../Common/Styles/Mixins/Mixins";
+
+
+.header {
+    grid-area: h;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+
+        .item {
+            text-decoration: none;
+            color: $textDescriptionColor;
+            font-family: $font;
+            font-weight: 500;
+            padding: 0 30px;
+            display: inline-block;
+            @include text($font, 18px, 1, 500);
+
+            @media screen and (max-width: 1600px) {
+                padding: 0 22px
+            }
+        }
+    }
+
+    .socialNetworks {
+        display: flex;
+        justify-content: space-between;
+
+
+        .socialIcon {
+            height: 40px;
+            width:  40px;
+            margin-right: 20px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+
+        }
+    }
+}
+
+
+
+

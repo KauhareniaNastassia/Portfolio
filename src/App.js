@@ -5,6 +5,7 @@ import About from "./Skills/About";
 import Projects from "./Projects/Projects";
 import Contacts from "./Contacts/Contacts";
 import Photo from "./Photo/Photo";
+import Skills from "./Skills/Skills/Skills";
 
 function App() {
     return (
@@ -16,10 +17,13 @@ function App() {
 
                 <Main/>
                 <About/>
+                <Skills/>
                 <Projects/>
-
                 <Contacts/>
-                {/*<Footer/>*/}
+
+                {/*найти все иконки чб
+                перепроверить и вставить все варайаблс
+                в поддержку по поводу блока фото*/}
 
             </div>
         </div>

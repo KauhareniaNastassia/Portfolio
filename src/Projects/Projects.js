@@ -24,10 +24,7 @@ function Projects() {
 
 
                 <div className={style.projects}>
-                    <Project
-                        style={socialNetwork}
-                        title={"Social Network"}
-                        projectDescription={"Bla-bla-bla-bla"}/>
+
                     <Project
                         style={socialNetwork}
                         title={"Social Network"}

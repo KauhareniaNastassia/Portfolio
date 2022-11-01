@@ -1,0 +1,19 @@
+@import "../../Styles/SASS/Variables";
+@import "../../Styles/Mixins/Mixins";
+
+.btn {
+  text-decoration: none;
+  color: $textColorBTN;
+  display: inline-block;
+  background-color: #333;
+  padding: 2px 15px;
+  text-transform: none;
+  border: 2px solid #333;
+  position: relative;
+  z-index: 1;
+  @include text($font, 12px, 1px, 300);
+
+  @media (max-width: 1200px) {
+    padding: 2px 8px;
+  }
+}

@@ -1,0 +1,10 @@
+.photo {
+    grid-area: n;
+
+    border: 1px solid #1c1616;
+    width: 300px;
+    heihth: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+

@@ -1,0 +1,47 @@
+@import "../Common/Styles/SASS/Variables";
+@import "../Common/Styles/Mixins/Mixins";
+
+.contactsBlock {
+  padding: 10px 10px 50px;
+
+  .contactsContainer {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+
+    .form {
+
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+
+      @media screen and (max-width: 500px) {
+        width: 100%;
+      }
+
+      .input, .textarea {
+        border: 1px solid $lineColor;
+        background-color: transparent;
+        margin-bottom: 20px;
+        @include text($font, 14px, 6px, 300);
+        color: $lineColor;
+
+      }
+
+      .textarea {
+        min-height: 80px;
+        padding-top: 8px;
+      }
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+

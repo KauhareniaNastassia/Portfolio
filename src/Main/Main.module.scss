@@ -1,0 +1,14 @@
+@import "../Common/Styles/SASS/Variables";
+
+.mainBlock {
+    height: 100vh;
+    background-color: $backgroundColor;
+
+    .text {
+        width: 300px;
+        font-family: $font;
+        color: $textTitleColor;
+    }
+}
+
+

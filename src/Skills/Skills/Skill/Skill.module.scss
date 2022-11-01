@@ -1,0 +1,38 @@
+@import "../../../Common/Styles/SASS/Variables";
+@import "../../../Common/Styles/Mixins/Mixins";
+
+.skill {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+
+    border: 1px solid $lineColor;
+
+    margin-bottom: 30px;
+
+
+    .icon {
+        height: 100px;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    h3 {
+        @include text($font, 20px, 1.2, 500);
+        color: $textTitleColor;
+        margin: 0 0 5px;
+    }
+}
+
+
