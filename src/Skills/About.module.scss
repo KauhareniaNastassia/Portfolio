@@ -2,7 +2,6 @@
 @import "../Common/Styles/Mixins/Mixins";
 
 .aboutBlock {
-
   padding: 10px 10px 50px;
 
   .aboutContainer {
@@ -38,6 +37,7 @@
           @include text($font, 16px, 1.5, 700);
           color: $textDescriptionColor
         }
+
         .infoDescr {
           min-width: 120px;
           @include text($font, 16px, 1.5, 400);
@@ -45,6 +45,6 @@
         }
       }
     }
-    }
   }
+}
 

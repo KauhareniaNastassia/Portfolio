@@ -21,8 +21,6 @@ function Projects() {
 
             <div className={`${style.projectsContainer} ${projectsContainer.container}`}>
 
-
-
                 <div className={style.projects}>
 
                     <Project
@@ -36,7 +34,6 @@ function Projects() {
                         projectDescription={"Bla-bla-bla-bla-Bla-bla-bla-bla-Bla-bla-bla-Bla-bla-bla-bla-Bla-bla-bla-bla-Bla-bla-bla-bla"}/>
 
                 </div>
-
             </div>
         </div>
     );

@@ -16,10 +16,9 @@
         .item {
             text-decoration: none;
             color: $textDescriptionColor;
-            font-family: $font;
-            font-weight: 500;
             padding: 0 30px;
             display: inline-block;
+            position: relative;
             @include text($font, 18px, 1, 500);
 
             @media screen and (max-width: 1600px) {
@@ -31,7 +30,6 @@
     .socialNetworks {
         display: flex;
         justify-content: space-between;
-
 
         .socialIcon {
             height: 40px;

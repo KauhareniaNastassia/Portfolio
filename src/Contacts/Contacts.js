@@ -18,7 +18,6 @@ function Contacts() {
                     <textarea className={style.textarea} value='Message'/>
                 </form>
                 <Button text={'Send message'}/>
-                {/*<button type='submit' className={style.btn}>Send</button>*/}
             </div>
         </div>
     );

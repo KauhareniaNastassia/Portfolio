@@ -1,12 +1,12 @@
 import style from './Skills.module.scss'
 import Skill from "./Skill/Skill";
 import Title from "../../Common/Components/Title/Title";
-import htmlImg from '../../Assets/Image/html.png'
-import cssImg from '../../Assets/Image/css.png'
-import jsImg from '../../Assets/Image/javascript.png'
-import typescriptImg from '../../Assets/Image/typescript.png'
-import reactImg from '../../Assets/Image/react.png'
-import reduxImg from '../../Assets/Image/redux.png'
+import htmlImg from '../../Assets/Image/html.svg'
+import cssImg from '../../Assets/Image/css.svg'
+import jsImg from '../../Assets/Image/javascript.svg'
+import typescriptImg from '../../Assets/Image/typescript.svg'
+import reactImg from '../../Assets/Image/react.svg'
+import reduxImg from '../../Assets/Image/redux.svg'
 
 
 function About() {
@@ -29,8 +29,6 @@ function About() {
     const redux = {
         backgroundImage: `url(${reduxImg})`,
     }
-
-
 
 
     return (

@@ -43,11 +43,7 @@ function About() {
                                 <a href=''>NastassiaKauharenia</a>
                             </li>
                         </ul>
-
                     </div>
-
-
-
             </div>
         </div>
     );
