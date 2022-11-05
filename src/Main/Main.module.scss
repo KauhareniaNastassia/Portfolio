@@ -2,12 +2,27 @@
 
 .mainBlock {
     height: 100vh;
-    background-color: $backgroundColor;
 
     .text {
+        margin-left: 10px;
         width: 300px;
         font-family: $font;
         color: $textTitleColor;
+
+
+        @media (max-width: 1019px) {
+            font-size: 16px;
+            h1 {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            font-size: 12px;
+            h1 {
+                font-size: 14px;
+            }
+        }
     }
 }
 

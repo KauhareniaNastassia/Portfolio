@@ -3,45 +3,53 @@
 
 
 .header {
-    grid-area: h;
-    height: 50px;
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  .nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 
-    .nav {
-        display: flex;
-        justify-content: space-between;
 
-        .item {
-            text-decoration: none;
-            color: $textDescriptionColor;
-            padding: 0 30px;
-            display: inline-block;
-            position: relative;
-            @include text($font, 18px, 1, 500);
+    .item {
+      text-decoration: none;
+      color: $textDescriptionColor;
+      padding: 0 30px;
+      display: inline-block;
+      position: relative;
+      @include text($font, 18px, 1, 500);
 
-            @media screen and (max-width: 1600px) {
-                padding: 0 22px
-            }
-        }
+      @media (max-width: 1019px) {
+        padding: 0 22px;
+        @include text($font, 16px, 1, 500);
+      }
+
+      @media (max-width: 800px) {
+        padding: 0 13px;
+        @include text($font, 14px, 1, 500);
+      }
     }
+  }
 
-    .socialNetworks {
-        display: flex;
-        justify-content: space-between;
+  .socialNetworks {
+    display: flex;
+    justify-content: space-between;
 
-        .socialIcon {
-            height: 40px;
-            width:  40px;
-            margin-right: 20px;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
-
-        }
+    .socialIcon {
+      height: 40px;
+      width: 40px;
+      margin-right: 20px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
     }
+  }
 }
 
 

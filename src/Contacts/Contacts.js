@@ -7,7 +7,7 @@ import Button from "../Common/Components/Button/Button";
 
 function Contacts() {
     return (
-        <div className={style.contactsBlock}>
+        <div id='contacts' className={style.contactsBlock}>
 
             <Title text={'get in touch'}/>
 

@@ -5,15 +5,21 @@
   text-decoration: none;
   color: $textColorBTN;
   display: inline-block;
-  background-color: #333;
+  background-color: $textTitleColor;
   padding: 2px 15px;
   text-transform: none;
-  border: 2px solid #333;
+  border: 2px solid $textTitleColor;
   position: relative;
   z-index: 1;
-  @include text($font, 12px, 1px, 300);
+  @include text($font, 14px, 1px, 300);
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1019px) {
     padding: 2px 8px;
+    font-size: 12px;
+  }
+
+  @media (max-width: 1019px) {
+    padding: 0 4px;
+    font-size: 10px;
   }
 }

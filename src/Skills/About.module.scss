@@ -9,39 +9,65 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
 
     @media screen and (max-width: 1130px) {
       justify-content: center;
+      flex-direction: column;
     }
 
+
     .leftBlock {
-      width: 50%;
+      width: 45%;
       @include text($font, 14px, 1.7, 400);
       color: $textDescriptionColor;
-      padding: 10px 0;
+
+      @media screen and (max-width: 1130px) {
+        width: 80%;
+      }
+
+      @media (max-width: 700px) {
+        font-size: 12px;
+      }
     }
 
     .rightBlock {
-      padding: 10px 10px;
-      width: 50%;
+      width: 45%;
 
-      li {
-        display: flex;
-        list-style-type: none;
-        margin: 0 0 8px;
-        width: 100%;
-        float: left;
+      @media screen and (max-width: 1130px) {
+        width: 80%;;
+      }
 
-        .infoTitle {
-          min-width: 120px;
-          @include text($font, 16px, 1.5, 700);
-          color: $textDescriptionColor
-        }
+      ul{
+        padding: 0;
 
-        .infoDescr {
-          min-width: 120px;
-          @include text($font, 16px, 1.5, 400);
-          color: $textDescriptionColor
+        li {
+          display: flex;
+          list-style-type: none;
+          margin: 0 0 8px;
+          width: 100%;
+          float: left;
+
+          .infoTitle {
+            min-width: 120px;
+            @include text($font, 16px, 1.5, 700);
+            color: $textDescriptionColor;
+
+            @media (max-width: 700px) {
+              font-size: 12px;
+            }
+          }
+
+          .infoDescr, a {
+            min-width: 120px;
+            @include text($font, 16px, 1.5, 400);
+            color: $textDescriptionColor;
+            text-decoration-line: none;
+
+            @media (max-width: 700px) {
+              font-size: 12px;
+            }
+          }
         }
       }
     }

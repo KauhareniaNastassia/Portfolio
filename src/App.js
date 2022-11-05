@@ -12,21 +12,16 @@ function App() {
         <div className={style.appWrapper}>
             <Header/>
             <Photo/>
-
             <div className={style.appWrapperContent}>
-
                 <Main/>
                 <About/>
                 <Skills/>
                 <Projects/>
                 <Contacts/>
-
-                {/*перепроверить медиа запросы
-                в поддержку по поводу блока фото*/}
-
             </div>
         </div>
     );
 }
 
 export default App;
+

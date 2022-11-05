@@ -4,7 +4,7 @@ import styleContainer from '../Common/Styles/Container.module.scss'
 
 function Main() {
     return (
-        <div className={style.mainBlock}>
+        <div id='main' className={style.mainBlock}>
             <div className={styleContainer.container}>
                 <div className={style.text}>
                     <span>Hi, there</span>

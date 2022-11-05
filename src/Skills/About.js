@@ -3,7 +3,7 @@ import Title from "../Common/Components/Title/Title";
 
 function About() {
     return (
-        <div className={style.aboutBlock}>
+        <div id='about' className={style.aboutBlock}>
             <Title text={'About'}/>
 
             <div className={`${style.aboutContainer} `}>
@@ -36,11 +36,11 @@ function About() {
                             </li>
                             <li>
                                 <span className={style.infoTitle}>LinkedIn:</span>
-                                <a href=''>NastassiaKauharenia</a>
+                                <a href='https://www.linkedin.com/in/nastassia-kavgorenya/' target="_blank" >NastassiaKauharenia</a>
                             </li>
                             <li>
                                 <span className={style.infoTitle}>GitHub:</span>
-                                <a href=''>NastassiaKauharenia</a>
+                                <a href='https://github.com/KauhareniaNastassia'  target="_blank" >NastassiaKauharenia</a>
                             </li>
                         </ul>
                     </div>

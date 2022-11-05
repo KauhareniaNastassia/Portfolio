@@ -1,11 +1,9 @@
-import style from './Photo.module.css'
+import style from './Photo.module.scss'
 
 
 function Photo() {
     return (
-        <div className={style.photo}>
-            BLOCK FOR PHOTO
-        </div>
+        <div className={style.photo}></div>
     );
 }
 

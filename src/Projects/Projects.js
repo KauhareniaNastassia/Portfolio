@@ -16,7 +16,7 @@ function Projects() {
 
 
     return (
-        <div className={style.projectsBlock}>
+        <div id='projects' className={style.projectsBlock}>
             <Title text={'Projects'}/>
 
             <div className={`${style.projectsContainer} ${projectsContainer.container}`}>
@@ -26,12 +26,12 @@ function Projects() {
                     <Project
                         style={socialNetwork}
                         title={"Social Network"}
-                        projectDescription={"Bla-bla-bla-bla"}/>
+                        projectDescription={"Stack: React, Redux, Typescript, Redux-Thunk, React-Router-dom, Axois, Formik, Rest API"}/>
 
                     <Project
                         style={todolist}
                         title={"Todolist"}
-                        projectDescription={"Bla-bla-bla-bla-Bla-bla-bla-bla-Bla-bla-bla-Bla-bla-bla-bla-Bla-bla-bla-bla-Bla-bla-bla-bla"}/>
+                        projectDescription={"Stack: React, Redux, Typescript, Redux-Thunk, Storybook, Postman, Axios, Javascript, Rest API"}/>
 
                 </div>
             </div>
