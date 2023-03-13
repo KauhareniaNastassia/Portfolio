@@ -1,29 +1,32 @@
 @import "Common/Styles/SASS/Variables";
 
 .appWrapper {
-  margin: 5px 100px;
-  max-width: 1600px;
-  display: flex;
+  margin: 0 auto;
+  width: 80%;
   position: relative;
   line-height: 1.7;
   letter-spacing: 0;
   word-wrap: break-word;
   font-weight: 400;
   font-family: $font;
+  display: grid;
+  grid-template-columns: 2fr  6fr;
+  grid-template-rows: 1fr  14fr;
+  grid-template-areas:
+               "header  header"
+               "sidebar content";
 
 
-    .appWrapperContent {
-      overflow: auto;
-      height: calc(100vh - 60px);
-      margin-top: 50px;
-      margin-left: 15px;
-      background-color: $backgroundColor;
+  .appWrapperContent {
+    grid-area: content;
+    height: calc(100vh - 50px);
+    margin-left: 15px;
+    background-color: $backgroundColor;
 
-      @media (max-width: 1034px) {
-        margin-left: 0;
-      }
+    @media (max-width: 1034px) {
+      margin-left: 0;
+    }
   }
-
 }
 
 

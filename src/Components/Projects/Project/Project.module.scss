@@ -1,0 +1,83 @@
+@import "../../../Common/Styles/SASS/Variables";
+@import "../../../Common/Styles/Mixins/Mixins";
+
+
+.project {
+  width: 400px;
+  position: relative;
+  border: 1px solid $lineColor;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+
+  .image {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      background-color: black;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0.2;
+    }
+  }
+
+  .projectTitle {
+    @include text($font, 18px, 1.2, 500);
+    color: $textTitleColor;
+    margin: 0 0 5px;
+
+    @media (max-width: 700px) {
+      font-size: 16px;
+    }
+  }
+
+  .inProcess {
+    @include text($font, 14px, 1.5, 400);
+    font-style: italic;
+    color: $textDescriptionColor;
+    width: 100%;
+
+    @media (max-width: 700px) {
+      font-size: 12px;
+    }
+  }
+
+  .description {
+    @include text($font, 14px, 1.5, 400);
+    color: $textDescriptionColor;
+    width: 100%;
+
+    @media (max-width: 700px) {
+      font-size: 12px;
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

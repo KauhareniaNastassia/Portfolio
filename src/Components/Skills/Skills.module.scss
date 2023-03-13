@@ -1,0 +1,21 @@
+@import "src/Common/Styles/SASS/Variables";
+@import "src/Common/Styles/Mixins/Mixins";
+
+
+.skillsBlock {
+    padding: 10px 10px 50px;
+    background-color: $backgroundColor;
+
+    .skillsContainer {
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+        .skills {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+}

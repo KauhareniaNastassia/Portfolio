@@ -1,0 +1,121 @@
+@import "src/Common/Styles/SASS/Variables";
+@import "src/Common/Styles/Mixins/Mixins";
+
+.aboutBlock {
+  padding: 10px 10px 50px;
+  background-color: $backgroundColor;
+  min-height: calc(100vh - 50px);
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+
+    .aboutContainer {
+
+      flex-wrap: wrap;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      align-items: flex-start;
+
+      @media screen and (max-width: 1130px) {
+        justify-content: center;
+        flex-direction: column;
+      }
+
+
+      .leftBlock {
+        width: 40%;
+        @include text($font, 14px, 1.7, 400);
+        color: $textDescriptionColor;
+
+        @media screen and (max-width: 1130px) {
+          width: 80%;
+        }
+
+        @media (max-width: 700px) {
+          font-size: 12px;
+        }
+      }
+
+      .rightBlock {
+        width: 45%;
+
+        @media screen and (max-width: 1130px) {
+          width: 80%;;
+        }
+
+        ul {
+          padding: 0;
+
+          li {
+            display: flex;
+            list-style-type: none;
+            margin: 0 0 8px;
+            width: 100%;
+            float: left;
+
+            .infoTitle {
+              min-width: 120px;
+              @include text($font, 16px, 1.5, 700);
+              color: $textDescriptionColor;
+
+              @media (max-width: 700px) {
+                font-size: 12px;
+              }
+            }
+
+            .infoDescr, a {
+              min-width: 120px;
+              @include text($font, 16px, 1.5, 400);
+              color: $textDescriptionColor;
+              text-decoration-line: none;
+
+              @media (max-width: 700px) {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .linksContainer {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+
+      .linkItem {
+        width: 120px;
+        text-decoration: none;
+        @include text($font, 16px, 1, 500);
+        color: $textDescriptionColor;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+
+        &:hover,
+        &:active {
+          color: $textTitleColor;
+        }
+
+        img {
+          filter: invert(14%) sepia(1%) saturate(0%) hue-rotate(168deg) brightness(98%) contrast(40%);
+
+          &:hover,
+          &:active {
+            filter: invert(14%) sepia(1%) saturate(0%) hue-rotate(168deg) brightness(98%) contrast(100%);
+          }
+        }
+
+
+      }
+    }
+  }
+
+
+}
+

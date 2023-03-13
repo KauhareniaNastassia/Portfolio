@@ -1,0 +1,89 @@
+@import "src/Common/Styles/SASS/Variables";
+@import "src/Common/Styles/Mixins/Mixins";
+
+
+
+.fixed {
+  position: fixed;
+  top: 0;
+  grid-area: header;
+  z-index: 1;
+  width: 80%;
+
+  .header {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    position: relative;
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+
+      @media (max-width: 800px) {
+        display: none;
+      }
+
+      .item {
+        text-decoration: none;
+        color: $textDescriptionColor;
+        display: inline-block;
+        position: relative;
+        @include text($font, 18px, 1, 500);
+        height: 20px;
+        padding-bottom: 5px;
+
+        @media (max-width: 1019px) {
+          gap: 22px;
+          @include text($font, 16px, 1, 500);
+        }
+
+        @media (max-width: 800px) {
+          gap: 13px;
+          @include text($font, 14px, 1, 500);
+        }
+
+        &:hover,
+        &:active{
+          border-bottom: 1px solid $textTitleColor;
+          transition: .3s ease-in-out all;
+        }
+      }
+    }
+
+    .burger {
+      display: none;
+
+      @media (max-width: 800px) {
+        display: inline-flex;
+      }
+    }
+
+    .socialNetworks {
+      display: flex;
+      justify-content: space-between;
+
+      .socialIcon {
+        height: 40px;
+        width: 40px;
+        margin-right: 20px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+

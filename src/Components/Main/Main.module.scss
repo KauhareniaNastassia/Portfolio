@@ -1,0 +1,57 @@
+@import "src/Common/Styles/SASS/Variables";
+@import "src/Common/Styles/Mixins/Mixins";
+
+.mainBlock {
+    height: calc(100vh - 50px);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    .text {
+        margin-left: 10px;
+        width: 300px;
+        font-family: $font;
+        color: $textTitleColor;
+
+
+        @media (max-width: 1019px) {
+            font-size: 16px;
+            h1 {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            font-size: 12px;
+            h1 {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .downloadBlock {
+        .message {
+            text-decoration: none;
+            @include text($font, 18px, 1, 600);
+            color: $textTitleColor;
+
+            img {
+                filter: invert(14%) sepia(1%) saturate(0%) hue-rotate(168deg) brightness(98%) contrast(40%);
+
+                &:hover,
+                &:active {
+                    filter: invert(14%) sepia(1%) saturate(0%) hue-rotate(168deg) brightness(98%) contrast(90%);
+                }
+            }
+
+            &:hover,
+            &:active {
+                filter: invert(14%) sepia(1%) saturate(0%) hue-rotate(168deg) brightness(98%) contrast(91%);
+            }
+        }
+    }
+}
+
+
