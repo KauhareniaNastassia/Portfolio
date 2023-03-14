@@ -1,5 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import style from './BurgerMenu.module.scss'
+import {NavMenuItem} from "../NavMenuItem/NavMenuItem";
 
 
 export const BurgerMenu = () => {
@@ -54,23 +55,32 @@ export const BurgerMenu = () => {
             {!popUpClose &&
 
                 <div className={style.burger_popUp}>
-                    <a href="#main"
-                       className={style.burger_popUp_item}
-                       onClick={closeSideBar}>
-                        Main
-                    </a>
-                    <a href="#about"
-                       className={style.burger_popUp_item}
-                       onClick={closeSideBar}>About</a>
-                    <a href="#skills"
-                       className={style.burger_popUp_item}
-                       onClick={closeSideBar}>Skills</a>
-                    <a href="#projects"
-                       className={style.burger_popUp_item}
-                       onClick={closeSideBar}>Projects</a>
-                    <a href="#contacts"
-                       className={style.burger_popUp_item}
-                       onClick={closeSideBar}>Contacts</a>
+
+                    <NavMenuItem
+                        path="main"
+                        title='Main'
+                        onClick={closeSideBar}
+                    />
+                    <NavMenuItem
+                        path="about"
+                        title='About'
+                        onClick={closeSideBar}
+                    />
+                    <NavMenuItem
+                        path="skills"
+                        title='Skills'
+                        onClick={closeSideBar}
+                    />
+                    <NavMenuItem
+                        path="projects"
+                        title='Projects'
+                        onClick={closeSideBar}
+                    />
+                    <NavMenuItem
+                        path="contacts"
+                        title='Contacts'
+                        onClick={closeSideBar}
+                    />
                 </div>
             }
         </div>

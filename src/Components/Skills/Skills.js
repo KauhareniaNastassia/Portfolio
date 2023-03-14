@@ -13,7 +13,8 @@ import postmanImg from '../../Assets/Image/postman.svg'
 import unitTestImg from '../../Assets/Image/unitTest.svg'
 import softSkillsImg from '../../Assets/Image/softSkills.svg'
 import materialUIImg from '../../Assets/Image/materialUI.svg'
-
+import Fade from 'react-reveal/Fade';
+import Pulse from 'react-reveal/Pulse';
 
 
 function About() {
@@ -59,8 +60,11 @@ function About() {
     return (
         <div id='skills' className={style.skillsBlock}>
             <Title text={'Skills'}/>
+            <Fade bottom cascade>
             <div className={style.skillsContainer}>
+
                 <div className={style.skills}>
+
                     <Skill title={"HTML"}
                            style={html}/>
 
@@ -97,7 +101,9 @@ function About() {
                     <Skill title={"SOFT SKILLS"}
                            style={softSkills}/>
                 </div>
+
             </div>
+            </Fade>
         </div>
     );
 }

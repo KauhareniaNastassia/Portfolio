@@ -5,7 +5,7 @@
 .title {
     @include text($font, 18px, 1.1, 500);
     color: $textTitleColor;
-    position: relative;
+
     letter-spacing: 7px;
     text-transform: uppercase;
     margin-left: 3px;

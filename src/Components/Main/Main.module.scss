@@ -8,6 +8,20 @@
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  position: relative;
+
+
+  .particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 900px;
+    z-index: 0;
+    /*opacity: 0.3;*/
+  }
+
 
   .text {
     margin-left: 10px;
@@ -28,6 +42,10 @@
         font-size: 14px;
       }
     }
+
+    .printedText {
+      font-size: 20px;
+    }
   }
 
   .downloadBlock {
@@ -40,7 +58,7 @@
 
     .message {
       text-decoration: none;
-      @include text($font, 18px, 1, 600);
+      @include text($font, 18px, 1, 500);
       color: $textDescriptionColor;
 
       &:hover,

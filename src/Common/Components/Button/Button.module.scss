@@ -13,8 +13,20 @@
   z-index: 1;
   @include text($font, 14px, 1px, 300);
 
-  &:hover {
+  @keyframes pulsate {
+    0% {
+      box-shadow:
+    0 0 25px #bd969c,
+    0 0 50px #c08e96;
+    }
+  }
+
+  &:hover,
+  &:active {
     cursor: pointer;
+    transition: .5s ease-in-out all;
+    transform: rotate3d(1, 1, 1, 0deg) scale3d(1.05, 1.05, 1.05);
+    animation: pulsate 1s ease-in-out;
   }
 
   @media (max-width: 1019px) {

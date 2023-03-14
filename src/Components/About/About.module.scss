@@ -5,6 +5,7 @@
   padding: 10px 10px 50px;
   background-color: $backgroundColor;
   min-height: calc(100vh - 50px);
+  position: relative;
 
   .wrapper {
     display: flex;
@@ -102,7 +103,7 @@
           color: $textTitleColor;
           border: 1px solid $textDescriptionColor;
           transition: .7s ease-in-out all;
-          transform: rotate3d(1, 1, 1, 0deg) scale3d(1.1, 1.1, 1.1);
+
         }
 
         img {
@@ -112,6 +113,7 @@
           &:active {
             filter: invert(14%) sepia(1%) saturate(0%) hue-rotate(168deg) brightness(98%) contrast(100%);
             transition: .4s ease-in-out all;
+            transform: rotate3d(1, 1, 1, 0deg) scale3d(1.1, 1.1, 1.1);
           }
         }
       }

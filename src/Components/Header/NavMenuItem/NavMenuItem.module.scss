@@ -1,0 +1,25 @@
+@import "src/Common/Styles/SASS/Variables";
+@import "src/Common/Styles/Mixins/Mixins";
+
+
+.active {
+  border-bottom: 1px solid $textTitleColor;
+  transition: .3s ease-in-out all;
+}
+
+.item {
+  text-decoration: none;
+  color: $textDescriptionColor;
+  display: inline-block;
+  position: relative;
+  @include text($font, 16px, 1, 500);
+  height: 20px;
+  padding-bottom: 5px;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    border-bottom: 1px solid $textTitleColor;
+    transition: .3s ease-in-out all;
+  }
+}

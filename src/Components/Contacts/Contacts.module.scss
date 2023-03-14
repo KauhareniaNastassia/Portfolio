@@ -2,70 +2,81 @@
 @import "src/Common/Styles/Mixins/Mixins";
 
 .contactsBlock {
-  padding: 10px 10px;
+  padding: 10px 10px 0 10px;
   background-color: $backgroundColor;
-  height: calc(70vh - 50px);
+  height: calc(100vh - 50px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-  .contactsContainer {
+  .wrapper {
     display: flex;
-    padding-top: 20px;
     flex-direction: column;
-    align-items: center;
-    gap: 50px;
+    justify-content: space-between;
 
-    .form {
+    .contactsContainer {
       display: flex;
+      padding-top: 20px;
       flex-direction: column;
-      width: 50%;
-      gap: 25px;
+      align-items: center;
+      gap: 50px;
 
-      @media screen and (max-width: 500px) {
-        width: 100%;
-      }
-
-      .inputWrapper {
-        width: 100%;
-        position: relative;
+      .form {
         display: flex;
         flex-direction: column;
+        width: 50%;
+        gap: 25px;
 
-        .input, .textarea {
-          border: 1px solid $lineColor;
-          background-color: transparent;
-          padding: 5px 12px;
-          @include text($font, 14px, 6px, 300);
-          color: $textTitleColor;
 
-          &:active,
-          &:focus {
-            outline: none !important;
+        @media screen and (max-width: 500px) {
+          width: 100%;
+        }
+
+        .inputWrapper {
+          width: 100%;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+
+          .input, .textarea {
+            border: 1px solid $lineColor;
+            background-color: transparent;
+            padding: 5px 12px;
+            @include text($font, 14px, 6px, 300);
+            color: $textTitleColor;
+
+            &:active,
+            &:focus {
+              outline: none !important;
+            }
+          }
+
+          .textarea {
+            min-height: 80px;
           }
         }
 
-        .textarea {
-          min-height: 80px;
+        input:focus-within ~ label,
+        input:not(:placeholder-shown) ~ label,
+        textarea:focus-within ~ label,
+        textarea:not(:placeholder-shown) ~ label {
+          @include text($font, 14px, 1, 300);
+          color: $lineColor;
+          transform: translateY(-23px);
         }
-      }
 
-      input:focus-within ~ label,
-      input:not(:placeholder-shown) ~ label,
-      textarea:focus-within ~ label,
-      textarea:not(:placeholder-shown) ~ label {
-        @include text($font, 14px, 1, 300);
-        color: $lineColor;
-        transform: translateY(-23px);
-      }
-
-      label {
-        position: absolute;
-        top: 1px;
-        left: 1px;
-        display: inline-block;
-        padding: 7px 12px;
-        transition: 0.5s;
-        pointer-events: none;
-        @include text($font, 16px, 1, 300);
-        color: $textDescriptionColor;
+        label {
+          position: absolute;
+          top: 1px;
+          left: 1px;
+          display: inline-block;
+          padding: 7px 12px;
+          transition: 0.5s;
+          pointer-events: none;
+          @include text($font, 16px, 1, 300);
+          color: $textDescriptionColor;
+        }
       }
     }
   }

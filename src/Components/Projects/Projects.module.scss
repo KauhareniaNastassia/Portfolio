@@ -4,6 +4,7 @@
   background-color: $backgroundColor;
   padding: 10px 10px 50px;
   min-height: calc(100vh - 50px);
+  position: relative;
 
   .projectsContainer {
     display: flex;

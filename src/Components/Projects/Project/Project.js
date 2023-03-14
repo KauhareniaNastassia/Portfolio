@@ -1,18 +1,20 @@
 import style from './Project.module.scss'
 import Button from "../../../Common/Components/Button/Button";
-
+import Tilt from 'react-tilt'
 
 function Project(props) {
     return (
+
         <div className={style.project}>
             <div
                 className={style.image}
                 style={props.style}>
                 <a href={props.link}
                    target='_blank'>
-                    <Button style={style.hoverBtn} text={'See'}/>
+                    <Button text={'See'}/>
                 </a>
             </div>
+
             <div className={style.projectInfo}>
                 <h4 className={style.projectTitle}>{props.title}</h4>
                 <span className={style.description}>{props.projectDescription}</span>
@@ -23,6 +25,7 @@ function Project(props) {
                 </a>
             </div>
         </div>
+
     );
 }
 
