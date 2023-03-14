@@ -1,10 +1,6 @@
 import style from './Main.module.scss'
-import styleContainer from '../../Common/Styles/Container.module.scss'
-import linkedInImg from "../../Assets/Image/linkedin.svg";
-import githubImg from "../../Assets/Image/github.svg";
 import cvImg from "../../Assets/Image/resume.svg";
 import NastassiaKauharenia from '../../Assets/Image/KauhareniaNastassia.pdf'
-
 
 
 function Main() {

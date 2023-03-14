@@ -1,9 +1,6 @@
-
 import style from './Contacts.module.scss'
-import contactsContainer from "../../Common/Styles/Container.module.scss";
 import Title from "../../Common/Components/Title/Title";
 import Button from "../../Common/Components/Button/Button";
-
 
 
 function Contacts() {
@@ -12,11 +9,35 @@ function Contacts() {
 
             <Title text={'get in touch'}/>
 
-            <div className={`${style.contactsContainer} ${contactsContainer.container}`}>
+            <div className={style.contactsContainer}>
                 <form className={style.form}>
-                    <input type='text' className={style.input} value='Name' onChange={() => {}}/>
-                    <input type='text' className={style.input} value='E-mail' onChange={() => {}}/>
-                    <textarea className={style.textarea} value='Message' onChange={() => {}}/>
+                    <div  className={style.inputWrapper}>
+                        <input
+                            type='text'
+                            className={style.input}
+                            placeholder=' '
+                            id='Name'
+                            onChange={() => {}}/>
+                        <label htmlFor='Name'>Name</label>
+                    </div>
+                    <div className={style.inputWrapper}>
+                        <input
+                            type='email'
+                            className={style.input}
+                            placeholder=' '
+                            id='Email'
+                            onChange={() => {}}/>
+                        <label htmlFor='Email'>E-mail</label>
+                    </div>
+                    <div className={style.inputWrapper}>
+                        <textarea
+                            className={style.textarea}
+                            placeholder=' '
+                            id='Message'
+                            onChange={() => {}}/>
+                        <label htmlFor='Message'>Message</label>
+                    </div>
+
                 </form>
                 <Button text={'Send message'}/>
             </div>

@@ -12,19 +12,16 @@
     gap: 80px;
 
     .aboutContainer {
-
       flex-wrap: wrap;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-
       align-items: flex-start;
 
       @media screen and (max-width: 1130px) {
         justify-content: center;
         flex-direction: column;
       }
-
 
       .leftBlock {
         width: 40%;
@@ -88,7 +85,8 @@
       flex-wrap: wrap;
 
       .linkItem {
-        width: 120px;
+        width: 140px;
+        height: 140px;
         text-decoration: none;
         @include text($font, 16px, 1, 500);
         color: $textDescriptionColor;
@@ -96,10 +94,15 @@
         flex-direction: column;
         gap: 10px;
         align-items: center;
+        padding: 10px;
+        box-sizing: border-box;
 
         &:hover,
         &:active {
           color: $textTitleColor;
+          border: 1px solid $textDescriptionColor;
+          transition: .7s ease-in-out all;
+          transform: rotate3d(1, 1, 1, 0deg) scale3d(1.1, 1.1, 1.1);
         }
 
         img {
@@ -108,14 +111,11 @@
           &:hover,
           &:active {
             filter: invert(14%) sepia(1%) saturate(0%) hue-rotate(168deg) brightness(98%) contrast(100%);
+            transition: .4s ease-in-out all;
           }
         }
-
-
       }
     }
   }
-
-
 }
 

@@ -1,7 +1,7 @@
 import style from './Header.module.scss'
 import linkedInImg from '../../Assets/Image/linkedin.svg'
 import githubImg from '../../Assets/Image/github.svg'
-import React, {useRef, useState} from "react";
+import React from "react";
 import {BurgerMenu} from "./BurgerMenu/BurgerMenu";
 
 
@@ -14,14 +14,12 @@ function Header() {
         backgroundImage: `url(${githubImg})`,
     }
 
-
     return (
         <div className={style.fixed}>
 
             <div className={style.header}>
 
                 <div className={style.socialNetworks}>
-
                     <a href='src/Components/Header/Header' target='_blank'>
                         <div className={style.socialIcon} style={linkedIn}></div>
                     </a>
@@ -48,6 +46,7 @@ function Header() {
                 <div className={style.burger}>
                     <BurgerMenu/>
                 </div>
+
             </div>
 
 

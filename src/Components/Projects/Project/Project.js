@@ -1,4 +1,3 @@
-
 import style from './Project.module.scss'
 import Button from "../../../Common/Components/Button/Button";
 
@@ -9,14 +8,20 @@ function Project(props) {
             <div
                 className={style.image}
                 style={props.style}>
-
-                <Button text={'See'}/>
-
+                <a href={props.link}
+                   target='_blank'>
+                    <Button style={style.hoverBtn} text={'See'}/>
+                </a>
             </div>
-            <h4 className={style.projectTitle}>{props.title}</h4>
-            <span className={style.inProcess}>{props.inProcess}</span>
-            <span className={style.description}>{props.projectDescription}</span>
-
+            <div className={style.projectInfo}>
+                <h4 className={style.projectTitle}>{props.title}</h4>
+                <span className={style.description}>{props.projectDescription}</span>
+                <a href={props.codeLink}
+                   target='_blank'
+                   className={style.codeLink}>
+                    Source code
+                </a>
+            </div>
         </div>
     );
 }

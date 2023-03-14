@@ -5,6 +5,7 @@
 .skillsBlock {
     padding: 10px 10px 50px;
     background-color: $backgroundColor;
+    min-height: calc(100vh - 50px);
 
     .skillsContainer {
         flex-direction: column;
@@ -15,6 +16,7 @@
             width: 100%;
             display: flex;
             justify-content: space-between;
+            gap: 50px;
             flex-wrap: wrap;
         }
     }

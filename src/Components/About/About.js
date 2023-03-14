@@ -5,8 +5,8 @@ import github from '../../Assets/Image/github.svg'
 import codewars from '../../Assets/Image/codewars.svg'
 
 
-
 function About() {
+
     return (
         <div id='about' className={style.aboutBlock}>
             <Title text={'About'}/>
@@ -15,8 +15,12 @@ function About() {
                 <div className={style.aboutContainer}>
                     <div className={style.leftBlock}>
                         <p>I am a front-end developer with huge interest in programming. I have
-                            an experience in creating SPA with React/Redux/ TypeScript in team. Now I am improving my skills in this direction and expanding them with new technologies. And also I have interest to learn React Native and Angular. I have an experience in design, I was studying UX/UI design.</p>
-                        <p>I spend my leisure time reading literature and articles about development, watching video tutorials on YouTube about React and JS.</p>
+                            an experience in creating SPA with React/Redux/ TypeScript in team. Now I am improving my
+                            skills in this direction and expanding them with new technologies. And also I have interest
+                            to learn React Native and Angular. I have an experience in design, I was studying UX/UI
+                            design.</p>
+                        <p>I spend my leisure time reading literature and articles about development, watching video
+                            tutorials on YouTube about React and JS.</p>
                     </div>
                     <div className={style.rightBlock}>
                         <ul>
@@ -50,7 +54,7 @@ function About() {
 
                     <a href='https://www.linkedin.com/in/nastassia-kavgorenya'
                        target='_blank'
-                       className={style.linkItem} >
+                       className={style.linkItem}>
                         <img src={linkedin} alt='social icon'/>
                         <span>My LinkedIn</span>
                     </a>
@@ -71,9 +75,6 @@ function About() {
 
                 </div>
             </div>
-
-
-
         </div>
     );
 }

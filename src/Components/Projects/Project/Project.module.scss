@@ -9,9 +9,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  margin-bottom: 30px;
+  gap: 10px;
   padding: 20px;
+  opacity: 0.9;
+
+  &:hover {
+    background-color: #efdde1;
+    border-color: $textTitleColor;
+    transition: .5s ease-in-out all;
+    opacity: 1;
+  }
 
   .image {
     height: 200px;
@@ -19,7 +26,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -35,39 +41,55 @@
       right: 0;
       opacity: 0.2;
     }
-  }
 
-  .projectTitle {
-    @include text($font, 18px, 1.2, 500);
-    color: $textTitleColor;
-    margin: 0 0 5px;
-
-    @media (max-width: 700px) {
-      font-size: 16px;
+    .hoverBtn {
+      &:hover {
+        transition: .5s ease-in-out all;
+        transform: rotate3d(1, 1, 1, 0deg) scale3d(1.3, 1.3, 1.3);
+      }
     }
   }
 
-  .inProcess {
-    @include text($font, 14px, 1.5, 400);
-    font-style: italic;
-    color: $textDescriptionColor;
-    width: 100%;
+  .projectInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
 
-    @media (max-width: 700px) {
-      font-size: 12px;
+    .projectTitle {
+      @include text($font, 18px, 1.2, 500);
+      color: $textTitleColor;
+      margin: 0 0 5px;
+
+      @media (max-width: 700px) {
+        font-size: 16px;
+      }
+    }
+
+    .description {
+      @include text($font, 14px, 1.5, 400);
+      color: $textDescriptionColor;
+      width: 100%;
+
+      @media (max-width: 700px) {
+        font-size: 12px;
+      }
+    }
+
+    .codeLink {
+      text-decoration: none;
+      @include text($font, 16px, 1.2, 500);
+      color: $textTitleColor;
+      height: 20px;
+
+      &:hover {
+        border-bottom: 1px solid $textTitleColor;
+        transition: .5s ease-in-out all;
+        transform: rotate3d(1, 1, 1, 0deg) scale3d(1.1, 1.1, 1.1);
+      }
     }
   }
-
-  .description {
-    @include text($font, 14px, 1.5, 400);
-    color: $textDescriptionColor;
-    width: 100%;
-
-    @media (max-width: 700px) {
-      font-size: 12px;
-    }
-  }
-
 }
 
 

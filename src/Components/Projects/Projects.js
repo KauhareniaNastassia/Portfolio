@@ -4,6 +4,7 @@ import Project from "./Project/Project";
 import Title from "../../Common/Components/Title/Title";
 import todoImage from '../../Assets/Image/todolist.jpg'
 import socialImage from '../../Assets/Image/logoSocial.jpg'
+import cardsImage from '../../Assets/Image/cards.jpg'
 
 function Projects() {
 
@@ -14,7 +15,7 @@ function Projects() {
         backgroundImage: `url(${todoImage})`,
     }
     const cards = {
-        backgroundImage: `url(${todoImage})`,
+        backgroundImage: `url(${cardsImage})`,
     }
 
 
@@ -29,20 +30,24 @@ function Projects() {
                     <Project
                         style={socialNetwork}
                         title={"Social Network"}
-                        inProcess={'(in process)'}
                         projectDescription={"Stack: React, Redux, Typescript, Redux-Thunk, React-Router-dom, Axois, Formik, Rest API"}
+                        link={'https://KauhareniaNastassia.github.io/Social_Network'}
+                        codeLink={'https://github.com/KauhareniaNastassia/Social_Network'}
                     />
-
-                    <Project
-                        style={todolist}
-                        title={"Todolist"}
-                        projectDescription={"Stack: React, Redux, Typescript, Redux-Thunk, Storybook, Postman, Axios, Javascript, Rest API"}/>
 
                     <Project
                         style={cards}
                         title={"Learning Cards"}
                         projectDescription={"Stack: React, Redux, Typescript, Redux-Thunk, Storybook, Postman, Axios, Javascript, Rest API"}
+                        link={'https://KauhareniaNastassia.github.io/Cards'}
+                        codeLink={'https://github.com/KauhareniaNastassia/Cards'}
+                    />
 
+                    <Project
+                        style={todolist}
+                        title={"Todolist"}
+                        projectDescription={"Stack: React, Redux, Typescript, Redux-Thunk, Storybook, Postman, Axios, Javascript, Rest API"}
+                        link={'https://KauhareniaNastassia.github.io/Todolist'}
                     />
 
                 </div>
