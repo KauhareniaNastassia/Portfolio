@@ -6,7 +6,6 @@ import Photo from "./Components/Photo/Photo";
 import Skills from "./Components/Skills/Skills";
 import About from "./Components/About/About";
 import Contacts from "./Components/Contacts/Contacts";
-import {Footer} from "./Components/Footer/Footer";
 
 function App() {
     return (
@@ -19,7 +18,6 @@ function App() {
                 <Skills/>
                 <Projects/>
                 <Contacts/>
-
             </div>
         </div>
     );

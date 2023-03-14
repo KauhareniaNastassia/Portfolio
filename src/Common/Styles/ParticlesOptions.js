@@ -1,5 +1,4 @@
 export const particlesOptions = {
-
     fpsLimit: 120,
     interactivity: {
         events: {
@@ -45,7 +44,7 @@ export const particlesOptions = {
             },
             random: false,
             speed: 2,
-            straight: true,
+
         },
         number: {
             density: {

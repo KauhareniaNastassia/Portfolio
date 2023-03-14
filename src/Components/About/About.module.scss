@@ -40,6 +40,7 @@
 
       .rightBlock {
         width: 45%;
+        display: flex;
 
         @media screen and (max-width: 1130px) {
           width: 80%;;
