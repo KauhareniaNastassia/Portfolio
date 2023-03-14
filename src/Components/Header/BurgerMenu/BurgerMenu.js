@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import style from './BurgerMenu.module.scss'
 
-export const BurgerMenu = () => {
 
+export const BurgerMenu = () => {
+    const ref = useRef();
     const [showMenuBtn, setShowMenuBtn] = useState(false)
     const [popUpClose, setPopUpClose] = useState(true)
 
@@ -17,17 +18,27 @@ export const BurgerMenu = () => {
         setPopUpClose(true)
     }
 
+    useEffect(() => {
 
-    /*   let menuButton = document.querySelector(".menuButton");
-       let menu = document.querySelector(".menu");
+        const checkIfClickedOutside = (e) => {
+            if (!popUpClose && !ref.current.contains(e.target) && !e.target.closest('.burgerButton')) {
+                closeSideBar();
+                e.preventDefault();
+            }
+            if (e.target.tagName === 'P') {
+                closeSideBar();
+            }
+        };
+        document.addEventListener('click', checkIfClickedOutside);
+        return () => {
+            document.removeEventListener('click', checkIfClickedOutside);
+        }
 
-       document.addEventListener('click', closeSideBar)
+    }, [popUpClose]);
 
-       let burgerButton = document.getElementById("hamburger");
-       burgerButton.addEventListener('click', onClickOpenMenu)*/
 
     return (
-        <div className={style.burger_wrapper}>
+        <div className={style.burger_wrapper} ref={ref}>
 
             <button
                 type='button'
@@ -45,7 +56,9 @@ export const BurgerMenu = () => {
                 <div className={style.burger_popUp}>
                     <a href="#main"
                        className={style.burger_popUp_item}
-                       onClick={closeSideBar}>Main</a>
+                       onClick={closeSideBar}>
+                        Main
+                    </a>
                     <a href="#about"
                        className={style.burger_popUp_item}
                        onClick={closeSideBar}>About</a>
