@@ -6,11 +6,11 @@
   display: flex;
   align-items: center;
   pointer-events: none;
-  height: 60px;
+  height: 70px;
 
   .title {
     @include text($font, 18px, 1, 700);
-    color: $textDescriptionColor;
+    color: $textTitleColor;
     text-transform: uppercase;
     cursor: pointer;
     pointer-events: auto;
@@ -61,11 +61,11 @@
     }
 
     .navItem:nth-child(odd) {
-      transform: translateY(1rem);
+      transform: translateY(0.5rem);
     }
 
     .navItem:nth-child(even) {
-      transform: translateY(-1rem);
+      transform: translateY(-0.5rem);
     }
   }
 

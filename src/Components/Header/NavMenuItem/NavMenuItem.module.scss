@@ -9,17 +9,17 @@
 
 .item {
   text-decoration: none;
-  color: $textDescriptionColor;
+  color: $textTitleColor;
   display: inline-block;
   position: relative;
   @include text($font, 16px, 1, 500);
   height: 20px;
   padding-bottom: 5px;
-  cursor: pointer;
 
   &:hover,
   &:active {
     border-bottom: 1px solid $textTitleColor;
     transition: .3s ease-in-out all;
+    cursor: pointer;
   }
 }

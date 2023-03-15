@@ -1,0 +1,127 @@
+@import "src/Common/Styles/SASS/Variables";
+@import "src/Common/Styles/Mixins/Mixins";
+
+
+.form {
+  display: flex;
+  padding-top: 20px;
+  flex-direction: column;
+  width: 50%;
+  gap: 60px;
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+  }
+
+  .inputWrapperBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .inputItem {
+      height: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+
+      .inputWrapper {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        .input, .textarea {
+          border: 1px solid $lineColor;
+          background-color: transparent;
+          padding: 5px 12px;
+          @include text($font, 14px, 6px, 300);
+          color: $textTitleColor;
+
+          &:active,
+          &:focus {
+            outline: none !important;
+          }
+        }
+
+        .textarea {
+          padding-top: 10px;
+          min-height: 80px;
+        }
+
+        .inputError {
+          border-color: #de2d4a;
+        }
+      }
+
+      input:focus-within ~ label,
+      input:not(:placeholder-shown) ~ label,
+      textarea:focus-within ~ label,
+      textarea:not(:placeholder-shown) ~ label {
+        @include text($font, 14px, 1, 300);
+        color: $lineColor;
+        transform: translateY(-23px);
+      }
+
+      label {
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        display: inline-block;
+        padding: 7px 12px;
+        transition: 0.5s;
+        pointer-events: none;
+        @include text($font, 16px, 1, 300);
+        color: $textDescriptionColor;
+      }
+
+      .error {
+        padding-left: 10px;
+        @include text($font, 14px, 1, 300);
+        color: #de2d4a;
+      }
+    }
+  }
+
+
+  .submitBtn {
+    align-self: center;
+    width: 200px;
+    border: none;
+    color: $textColorBTN;
+    background-color: $textTitleColor;
+    padding: 20px 15px;
+    @include text($font, 18px, 1px, 500);
+
+    @keyframes pulsate {
+      0% {
+        box-shadow: 0 0 25px #bd969c,
+        0 0 50px #c08e96;
+      }
+    }
+
+    &:hover:enabled,
+    &:active:enabled {
+      cursor: pointer;
+      background-color: #bd969c;
+      transition: .5s ease-in-out all;
+      transform: rotate3d(1, 1, 1, 0deg) scale3d(1.05, 1.05, 1.05);
+      animation: pulsate 1s ease-in-out;
+    }
+
+    &:disabled {
+      background-color: $textDescriptionColor;
+    }
+
+    @media (max-width: 1019px) {
+      padding: 2px 8px;
+      font-size: 12px;
+    }
+
+    @media (max-width: 1019px) {
+      padding: 0 4px;
+      font-size: 10px;
+    }
+  }
+
+
+}
