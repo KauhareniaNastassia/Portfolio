@@ -5,10 +5,20 @@
 
 .fixed {
   position: fixed;
+  left: 0;
   top: 0;
   grid-area: header;
   z-index: 1;
   width: 80%;
+  margin-left: 10%;
+
+  @media (max-width: 750px) {
+    width: 100%;
+    margin-left: 0;
+  }
+  @media (max-width: 400px) {
+    //width: 97%;
+  }
 
   .header {
     height: 50px;
@@ -19,6 +29,10 @@
     background-color: #ffffff;
     position: relative;
 
+    @media (max-width: 750px) {
+      padding: 0 15px;
+    }
+
     .nav {
       display: flex;
       justify-content: space-between;
@@ -28,32 +42,6 @@
       @media (max-width: 800px) {
         display: none;
       }
-
-     /* .item {
-        text-decoration: none;
-        color: $textDescriptionColor;
-        display: inline-block;
-        position: relative;
-        @include text($font, 18px, 1, 500);
-        height: 20px;
-        padding-bottom: 5px;
-
-        @media (max-width: 1019px) {
-          gap: 22px;
-          @include text($font, 16px, 1, 500);
-        }
-
-        @media (max-width: 800px) {
-          gap: 13px;
-          @include text($font, 14px, 1, 500);
-        }
-
-        &:hover,
-        &:active{
-          border-bottom: 1px solid $textTitleColor;
-          transition: .3s ease-in-out all;
-        }
-      }*/
     }
 
     .burger {
@@ -76,6 +64,14 @@
         background-position: center;
         background-repeat: no-repeat;
         position: relative;
+
+        @media (max-width: 800px) {
+          height: 30px;
+          width: 30px;
+        }
+        @media (max-width: 450px) {
+          display: none;
+        }
       }
     }
   }

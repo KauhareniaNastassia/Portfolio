@@ -10,11 +10,21 @@
   font-weight: 400;
   font-family: $font;
   display: grid;
-  grid-template-columns: 2fr  6fr;
+  grid-template-columns: 20%  75%;
   grid-template-rows: 1fr  14fr;
+  grid-column-gap: 5%;
   grid-template-areas:
                "header  header"
                "sidebar content";
+
+  @media (max-width: 800px) {
+    grid-template-columns: 0%  100%;
+    grid-column-gap: 0%;
+  }
+  @media (max-width: 750px) {
+    width: 100%;
+  }
+
 
   .appWrapperContent {
     grid-area: content;
@@ -22,8 +32,30 @@
     margin-left: 15px;
     background-color: $backgroundColor;
 
-    @media (max-width: 1034px) {
-      margin-left: 0;
+    @media (max-width: 800px) {
+      margin-left: 0px;
+    }
+    @media (max-width: 400px) {
+      width: 112.8%;
+    }
+    @media (max-width: 350px) {
+      width: 115%;
+    }
+    @media (max-width: 340px) {
+      width: 117%;
+
+    }
+    @media (max-width: 335px) {
+      width: 118%;
+    }
+    @media (max-width: 330px) {
+      width: 120%
+    }
+    @media (max-width: 327px) {
+      width: 122%
+    }
+    @media (max-width: 322px) {
+      width: 123.5%
     }
   }
 }

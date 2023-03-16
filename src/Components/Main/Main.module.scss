@@ -4,12 +4,48 @@
 .mainBlock {
   height: calc(100vh - 50px);
   margin: 0 auto;
+  align-items: center;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
   position: relative;
 
+  @media(max-width: 1080px) {
+    flex-direction: row;
+    gap: 50px;
+  }
+  @media(max-width: 900px) {
+    flex-direction: column;
+    justify-content: center;
+  }
+  @media (max-width: 750px) {
+    width: 100%;
+    gap: 60px;
+  }
+  @media (max-width: 700px) {
+    display: grid;
+    grid-template-columns: 30% 40%;
+    grid-template-rows: 1fr  1fr;
+    grid-column-gap: 10%;
+    grid-template-areas:
+               "photo  text"
+               "photo download";
+
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: 30% 50%;
+    grid-column-gap: 15%;
+  }
+  @media (max-width: 500px) {
+    grid-template-columns: 25% 40%;
+    grid-column-gap: 20%;
+  }
+  @media (max-width: 400px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   .particles {
     position: absolute;
@@ -22,29 +58,116 @@
     /*opacity: 0.3;*/
   }
 
+  .photo {
+    display: none;
+
+    @media (max-width: 800px) {
+      display: block;
+      position: relative;
+
+      .img {
+        width: 200px;
+        position: relative;
+
+        @media (max-width: 600px) {
+          width: 170px;
+        }
+
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        border: 3px solid #bd969c;
+        left: 10px;
+        top: 20px;
+        width: 200px;
+        height: 95%;
+        z-index: 0;
+
+        @media (max-width: 600px) {
+          width: 170px;
+        }
+
+
+      }
+    }
+    @media (max-width: 700px) {
+      grid-area: photo;
+    }
+    @media (max-width: 400px) {
+      margin-top: 20px;
+
+    }
+
+  }
 
   .text {
     margin-left: 10px;
-    width: 300px;
+    max-width: 300px;
     font-family: $font;
     color: $textTitleColor;
 
-    @media (max-width: 1019px) {
+    @media (max-width: 1020px) {
+      font-size: 16px;
+      h1 {
+        font-size: 20px;
+      }
+    }
+    @media (max-width: 700px) {
+      grid-area: text;
+      margin-top: 90px;
+      font-size: 14px;
+      h1 {
+        font-size: 20px;
+      }
+    }
+    @media (max-width: 550px) {
+      margin-top: 130px;
+    }
+    @media (max-width: 400px) {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0px;
+      text-align: center;
       font-size: 16px;
       h1 {
         font-size: 20px;
       }
     }
 
-    @media (max-width: 700px) {
-      font-size: 12px;
-      h1 {
-        font-size: 14px;
-      }
-    }
-
     .printedText {
       font-size: 20px;
+
+      @media (max-width: 1020px) {
+        font-size: 18px;
+      }
+      @media (max-width: 700px) {
+        font-size: 16px;
+      }
+      @media (max-width: 750px) {
+        font-size: 14px;
+      }
+      @media (max-width: 400px) {
+        font-size: 18px;
+      }
+
+    }
+
+    .downloadLink {
+      display: none;
+
+      @media(max-width: 400px) {
+        height: 20px;
+        display: inline;
+
+      }
+
+      a {
+
+        @include text($font, 16px, 1, 500);
+        color: $textTitleColor;
+      }
     }
   }
 
@@ -56,10 +179,44 @@
       transition: .5s ease-in-out all;
     }
 
+    @media (max-width: 700px) {
+      grid-area: download;
+      margin-bottom: 90px;
+      width: 200px;
+    }
+    @media (max-width: 550px) {
+      margin-bottom: 130px;
+      width: 150px;
+    }
+    @media (max-width: 430px) {
+      margin-left: 10px;
+      width: 100px;
+    }
+    @media (max-width: 400px) {
+      display: none;
+    }
+
     .message {
       text-decoration: none;
       @include text($font, 18px, 1, 500);
       color: $textDescriptionColor;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      @media(max-width: 1020px) {
+        font-size: 16px;
+      }
+      @media(max-width: 550px) {
+        font-size: 14px;
+      }
+      @media(max-width: 430px) {
+        text-align: center;
+      }
+      @media(max-width: 400px) {
+        font-size: 12px;
+      }
 
       &:hover,
       &:active {
@@ -73,9 +230,27 @@
         &:active {
           filter: invert(14%) sepia(1%) saturate(0%) hue-rotate(168deg) brightness(98%) contrast(90%);
         }
+
+        @media(max-width: 1080px) {
+          width: 150px;
+        }
+        @media(max-width: 1020px) {
+          width: 100px;
+        }
+        @media(max-width: 700px) {
+          width: 80px;
+        }
+        @media(max-width: 550px) {
+          width: 60px;
+        }
+        @media(max-width: 400px) {
+          width: 40px;
+        }
       }
     }
   }
+
+
 }
 
 
