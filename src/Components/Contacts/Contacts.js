@@ -35,7 +35,7 @@ function Contacts() {
                         </div>
 
 
-                        {/*<ContactsForm/>*/}
+                        <ContactsForm/>
 
                     </div>
                 </Fade>
