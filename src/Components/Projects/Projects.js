@@ -28,7 +28,6 @@ function Projects() {
 
                     <div className={style.projects}>
 
-
                         <Project
                             style={socialNetwork}
                             title={"Social Network"}
