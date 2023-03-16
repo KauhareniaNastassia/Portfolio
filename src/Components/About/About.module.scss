@@ -12,6 +12,13 @@
     flex-direction: column;
     gap: 80px;
 
+    @media (max-width: 1000px) {
+      gap: 40px;
+    }
+    @media (max-width: 900px) {
+      gap: 20px;
+    }
+
     .aboutContainer {
       flex-wrap: wrap;
       display: flex;
@@ -19,22 +26,18 @@
       justify-content: space-between;
       align-items: flex-start;
 
-      @media screen and (max-width: 1130px) {
+      @media (max-width: 1130px) {
         justify-content: center;
         flex-direction: column;
       }
 
       .leftBlock {
         width: 40%;
-        @include text($font, 14px, 1.7, 400);
+        @include text($font, 16px, 1.7, 400);
         color: $textDescriptionColor;
 
-        @media screen and (max-width: 1130px) {
-          width: 80%;
-        }
-
-        @media (max-width: 700px) {
-          font-size: 12px;
+        @media (max-width: 1130px) {
+          width: 100%;
         }
       }
 
@@ -42,8 +45,11 @@
         width: 45%;
         display: flex;
 
-        @media screen and (max-width: 1130px) {
-          width: 80%;;
+        @media (max-width: 1250px) {
+          width: 50%;
+        }
+        @media (max-width: 1130px) {
+          width: 100%;;
         }
 
         ul {
@@ -61,8 +67,8 @@
               @include text($font, 16px, 1.5, 700);
               color: $textDescriptionColor;
 
-              @media (max-width: 700px) {
-                font-size: 12px;
+              @media (max-width: 1130px) {
+                min-width: 100px;
               }
             }
 
@@ -71,10 +77,6 @@
               @include text($font, 16px, 1.5, 400);
               color: $textDescriptionColor;
               text-decoration-line: none;
-
-              @media (max-width: 700px) {
-                font-size: 12px;
-              }
             }
           }
         }
@@ -85,6 +87,10 @@
       display: flex;
       justify-content: space-evenly;
       flex-wrap: wrap;
+
+      @media (max-width: 700px) {
+        padding: 0 20px;
+      }
 
       .linkItem {
         width: 140px;
@@ -97,14 +103,17 @@
         gap: 10px;
         align-items: center;
         padding: 10px;
-        box-sizing: border-box;
 
         &:hover,
         &:active {
           color: $textTitleColor;
-          //border: 1px solid $textDescriptionColor;
           transition: .7s ease-in-out all;
+        }
 
+        @media (max-width: 1000px) {
+          width: 120px;
+          height: 120px;
+          font-size: 14px;
         }
 
         img {
@@ -115,6 +124,11 @@
             filter: invert(14%) sepia(1%) saturate(0%) hue-rotate(168deg) brightness(98%) contrast(100%);
             transition: .4s ease-in-out all;
             transform: rotate3d(1, 1, 1, 0deg) scale3d(1.1, 1.1, 1.1);
+          }
+
+          @media (max-width: 1000px) {
+            width: 90px;
+            height: 90px;
           }
         }
       }

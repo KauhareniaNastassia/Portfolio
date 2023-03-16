@@ -7,6 +7,7 @@ import {useCallback} from "react";
 import {particlesOptions} from "../../Common/Styles/ParticlesOptions";
 import Fade from 'react-reveal/Fade';
 import ReactTypingEffect from 'react-typing-effect';
+import myPhoto from '../../Assets/Image/myPhoto.jpg'
 
 
 function Main() {
@@ -20,10 +21,13 @@ function Main() {
     }, []);
 
 
-    return (
-        <div id='main' className={style.mainBlock}>
+    return (<div id='main' className={style.mainBlock}>
             <Particles className={style.particles} id="tsparticles" init={particlesInit}
                        loaded={particlesLoaded} params={particlesOptions}/>
+
+            <div className={style.photo}>
+                <img className={style.img} src={myPhoto} alt='my photo'/>
+            </div>
 
             <Fade left>
                 <div className={style.text}>
@@ -33,21 +37,26 @@ function Main() {
                         className={style.printedText}
                         text='Frontend Developer'
                     />
+                    <div className={style.downloadLink}>
+                        <a href={NastassiaKauharenia} download='NastassiaKauharenia.pdf'>
+                            Download my CV
+                        </a>
+                    </div>
+
+
                 </div>
             </Fade>
             <Fade right>
                 <div className={style.downloadBlock}>
                     <a href={NastassiaKauharenia} download='NastassiaKauharenia.pdf' className={style.message}>
                         <img src={cvImg} alt="CV icon"/>
-                        Download my CV
+                        <span>Download my CV</span>
                     </a>
                 </div>
             </Fade>
 
 
-
-        </div>
-    );
+        </div>);
 }
 
 
