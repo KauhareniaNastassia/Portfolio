@@ -4,19 +4,21 @@
 
 .form {
   display: flex;
-  padding-top: 20px;
+  //padding-top: 20px;
   flex-direction: column;
-  width: 50%;
-  gap: 60px;
+  width: 100%;
+  gap: 30px;
 
-  @media screen and (max-width: 500px) {
-    width: 100%;
-  }
 
   .inputWrapperBlock {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-bottom: 20px;
+
+    @media(max-width: 1000px) {
+      gap: 15px;
+    }
 
     .inputItem {
       height: 50px;
@@ -72,12 +74,21 @@
         pointer-events: none;
         @include text($font, 16px, 1, 300);
         color: $textDescriptionColor;
+
+        @media(max-width: 1000px) {
+          font-size: 14px;
+          padding: 9px 12px;
+        }
       }
 
       .error {
-        padding-left: 10px;
+        padding-left: 13px;
         @include text($font, 14px, 1, 300);
         color: #de2d4a;
+
+        @media(max-width: 1000px) {
+          font-size: 12px;
+        }
       }
     }
   }
@@ -113,14 +124,11 @@
     }
 
     @media (max-width: 1019px) {
-      padding: 2px 8px;
-      font-size: 12px;
+      padding: 20px 10px;
+      font-size: 16px;
     }
 
-    @media (max-width: 1019px) {
-      padding: 0 4px;
-      font-size: 10px;
-    }
+
   }
 
 

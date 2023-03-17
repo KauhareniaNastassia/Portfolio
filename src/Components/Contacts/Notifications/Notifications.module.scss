@@ -2,9 +2,10 @@
 @import "src/Common/Styles/Mixins/Mixins";
 
 .notificationWrapper {
+
   padding: 20px;
   text-align: center;
-  width: 80%;
+  width: 100%;
   align-self: center;
   @include text($font, 16px, 1.3, 300);
   color: $textTitleColor;

@@ -33,7 +33,6 @@ export const ContactsForm = () => {
         },
         onSubmit: (values) => {
             setLoading(true)
-           /* axios.post('http://localhost:3010/sendMessage', values)*/
             axios.post('https://gmail-smtp-ivory.vercel.app/sendMessage', values)
                 .then(res => {
                     setIsValuesSend(true)
@@ -42,56 +41,59 @@ export const ContactsForm = () => {
                 .catch(error => {
                     setError(true)
                 })
-                .finally( () => {
-                    setLoading(false)
+                .finally(() => {
+                        setLoading(false)
                     }
                 )
         }
     })
 
     return (
-        <form className={style.form} onSubmit={formik.handleSubmit}>
+        <div>
+            {isValuesSend
+                ? <Notifications isValuesSend={isValuesSend}/>
+                : <form className={style.form} onSubmit={formik.handleSubmit}>
 
-            <div className={style.inputWrapperBlock}>
+                    <div className={style.inputWrapperBlock}>
 
-                <div className={style.inputItem}>
+                        <div className={style.inputItem}>
 
-                    <div className={style.inputWrapper}>
-                        <input
-                            type='text'
-                            className={style.input}
-                            placeholder=' '
-                            id='name'
-                            {...formik.getFieldProps('name')}
-                        />
-                        <label htmlFor='name'>Name</label>
-                    </div>
-                    <span className={style.error}>
+                            <div className={style.inputWrapper}>
+                                <input
+                                    type='text'
+                                    className={style.input}
+                                    placeholder=' '
+                                    id='name'
+                                    {...formik.getFieldProps('name')}
+                                />
+                                <label htmlFor='name'>Name</label>
+                            </div>
+                            <span className={style.error}>
                                     {formik.touched.name && formik.errors.name}
                                 </span>
 
-                </div>
+                        </div>
 
-                <div className={style.inputItem}>
-                    <div className={style.inputWrapper}>
-                        <input
-                            type='email'
-                            className={style.input}
-                            placeholder=' '
-                            id='email'
-                            {...formik.getFieldProps('email')}
+                        <div className={style.inputItem}>
+                            <div className={style.inputWrapper}>
+                                <input
+                                    type='email'
+                                    className={style.input}
+                                    placeholder=' '
+                                    id='email'
+                                    {...formik.getFieldProps('email')}
 
-                        />
-                        <label htmlFor='email'>E-mail</label>
-                    </div>
-                    <span className={style.error}>
+                                />
+                                <label htmlFor='email'>E-mail</label>
+                            </div>
+                            <span className={style.error}>
                                     {formik.touched.email && formik.errors.email}
                                 </span>
 
-                </div>
+                        </div>
 
-                <div className={style.inputItem}>
-                    <div className={style.inputWrapper}>
+                        <div className={style.inputItem}>
+                            <div className={style.inputWrapper}>
                                 <textarea
                                     className={style.textarea}
 
@@ -99,26 +101,27 @@ export const ContactsForm = () => {
                                     id='message'
                                     {...formik.getFieldProps('message')}
                                 />
-                        <label htmlFor='message'>Message</label>
-                    </div>
-                    <span className={style.error}>
+                                <label htmlFor='message'>Message</label>
+                            </div>
+                            <span className={style.error}>
                                     {formik.touched.message && formik.errors.message}
                                 </span>
 
-                </div>
+                        </div>
 
-            </div>
+                    </div>
 
-            <button
-                disabled={!formik.dirty || !formik.isValid || loading}
-                type='submit'
-                className={style.submitBtn}>Send message
-            </button>
+                    <button
+                        disabled={!formik.dirty || !formik.isValid || loading}
+                        type='submit'
+                        className={style.submitBtn}>Send message
+                    </button>
 
-            { isValuesSend && <Notifications isValuesSend={isValuesSend}/>}
-            { error && <Notifications error={error}/>}
+                    <div>
 
-
-        </form>
+                        {error && <Notifications error={error}/>}
+                    </div>
+                </form>}
+        </div>
     );
 };
