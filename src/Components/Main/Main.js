@@ -22,13 +22,14 @@ function Main() {
 
 
     return (<div id='main' className={style.mainBlock}>
-            <Particles className={style.particles} id="tsparticles" init={particlesInit}
-                       loaded={particlesLoaded} params={particlesOptions}/>
+        <Particles className={style.particles} id="tsparticles" init={particlesInit}
+                   loaded={particlesLoaded} params={particlesOptions}/>
 
-            <div className={style.photo}>
-                <img className={style.img} src={myPhoto} alt='my photo'/>
-            </div>
+        <div className={style.photo}>
+            <img className={style.img} src={myPhoto} alt='my photo'/>
+        </div>
 
+        <div className={style.textAndDownloadWrapper}>
             <Fade left>
                 <div className={style.text}>
                     <span>Hi, there</span>
@@ -37,11 +38,11 @@ function Main() {
                         className={style.printedText}
                         text='Frontend Developer'
                     />
-                    <div className={style.downloadLink}>
+                    {/*<div className={style.downloadLink}>
                         <a href={NastassiaKauharenia} download='NastassiaKauharenia.pdf'>
                             Download my CV
                         </a>
-                    </div>
+                    </div>*/}
 
 
                 </div>
@@ -54,9 +55,10 @@ function Main() {
                     </a>
                 </div>
             </Fade>
+        </div>
 
 
-        </div>);
+    </div>);
 }
 
 
