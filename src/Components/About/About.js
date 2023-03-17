@@ -4,7 +4,6 @@ import linkedin from '../../Assets/Image/linkedin.svg'
 import github from '../../Assets/Image/github.svg'
 import codewars from '../../Assets/Image/codewars.svg'
 import Fade from 'react-reveal/Fade';
-import Zoom from 'react-reveal/Zoom';
 
 
 function About() {
@@ -77,10 +76,8 @@ function About() {
                             <img src={codewars} alt='social icon'/>
                             <span>My Codewars</span>
                         </a>
-
                     </div>
                 </Fade>
-
             </div>
         </div>
     );

@@ -14,7 +14,6 @@ import unitTestImg from '../../Assets/Image/unitTest.svg'
 import softSkillsImg from '../../Assets/Image/softSkills.svg'
 import materialUIImg from '../../Assets/Image/materialUI.svg'
 import Fade from 'react-reveal/Fade';
-import Pulse from 'react-reveal/Pulse';
 
 
 function About() {
@@ -56,53 +55,50 @@ function About() {
         backgroundImage: `url(${materialUIImg})`,
     }
 
-
     return (
         <div id='skills' className={style.skillsBlock}>
             <Title text={'Skills'}/>
             <Fade bottom cascade>
-            <div className={style.skillsContainer}>
+                <div className={style.skillsContainer}>
 
-                <div className={style.skills}>
+                    <div className={style.skills}>
+                        <Skill title={"HTML"}
+                               style={html}/>
 
-                    <Skill title={"HTML"}
-                           style={html}/>
+                        <Skill title={"CSS"}
+                               style={css}/>
 
-                    <Skill title={"CSS"}
-                           style={css}/>
+                        <Skill title={"JS"}
+                               style={js}/>
 
-                    <Skill title={"JS"}
-                           style={js}/>
+                        <Skill title={"TYPESCRIPT"}
+                               style={typescript}/>
 
-                    <Skill title={"TYPESCRIPT"}
-                           style={typescript}/>
+                        <Skill title={"REACT"}
+                               style={react}/>
 
-                    <Skill title={"REACT"}
-                           style={react}/>
+                        <Skill title={"REDUX"}
+                               style={redux}/>
 
-                    <Skill title={"REDUX"}
-                           style={redux}/>
+                        <Skill title={"GIT"}
+                               style={git}/>
 
-                    <Skill title={"GIT"}
-                           style={git}/>
+                        <Skill title={"STORYBOOK"}
+                               style={storybook}/>
 
-                    <Skill title={"STORYBOOK"}
-                           style={storybook}/>
+                        <Skill title={"POSTMAN"}
+                               style={postman}/>
 
-                    <Skill title={"POSTMAN"}
-                           style={postman}/>
+                        <Skill title={"MATERIAL UI"}
+                               style={materialUI}/>
 
-                    <Skill title={"MATERIAL UI"}
-                           style={materialUI}/>
+                        <Skill title={"UNIT TEST"}
+                               style={unitTest}/>
 
-                    <Skill title={"UNIT TEST"}
-                           style={unitTest}/>
-
-                    <Skill title={"SOFT SKILLS"}
-                           style={softSkills}/>
+                        <Skill title={"SOFT SKILLS"}
+                               style={softSkills}/>
+                    </div>
                 </div>
-
-            </div>
             </Fade>
         </div>
     );

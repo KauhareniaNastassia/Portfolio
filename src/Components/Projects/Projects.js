@@ -52,7 +52,6 @@ function Projects() {
                         />
 
                     </div>
-
                 </div>
             </Fade>
         </div>

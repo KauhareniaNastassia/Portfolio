@@ -1,6 +1,6 @@
 import style from './Main.module.scss'
 import cvImg from "../../Assets/Image/resume.svg";
-import NastassiaKauharenia from '../../Assets/Image/KauhareniaNastassia.pdf'
+import Nastassia_Kauharenia from '../../Assets/Image/Kauharenia_Nastassia.pdf'
 import Particles from "react-tsparticles";
 import {loadFull} from "tsparticles";
 import {useCallback} from "react";
@@ -38,26 +38,17 @@ function Main() {
                         className={style.printedText}
                         text='Frontend Developer'
                     />
-                    {/*<div className={style.downloadLink}>
-                        <a href={NastassiaKauharenia} download='NastassiaKauharenia.pdf'>
-                            Download my CV
-                        </a>
-                    </div>*/}
-
-
                 </div>
             </Fade>
             <Fade right>
                 <div className={style.downloadBlock}>
-                    <a href={NastassiaKauharenia} download='NastassiaKauharenia.pdf' className={style.message}>
+                    <a href={Nastassia_Kauharenia} download='Nastassia_Kauharenia.pdf' className={style.message}>
                         <img src={cvImg} alt="CV icon"/>
                         <span>Download my CV</span>
                     </a>
                 </div>
             </Fade>
         </div>
-
-
     </div>);
 }
 

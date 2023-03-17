@@ -1,9 +1,8 @@
 import React from 'react'
 import style from './Skill.module.scss'
-import Tilt from 'react-tilt'
 
 function Skill(props) {
-    return (/*<Tilt className="Tilt">*/
+    return (
         <div className={style.wrapper}>
 
             <div className={style.skill}>
@@ -12,14 +11,10 @@ function Skill(props) {
                 </div>
 
                 <div className={style.cardBack}>
-                    <h3>{props.title}</h3> {/*card back*/}
+                    <h3>{props.title}</h3>
                 </div>
-
             </div>
-
-        </div>
-
-        /*</Tilt>*/);
+        </div>);
 }
 
 export default Skill;

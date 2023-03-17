@@ -3,8 +3,6 @@ import linkedInImg from '../../Assets/Image/linkedin.svg'
 import githubImg from '../../Assets/Image/github.svg'
 import React from "react";
 import {BurgerMenu} from "./BurgerMenu/BurgerMenu";
-import * as Scroll from 'react-scroll';
-import {Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller} from 'react-scroll'
 import {NavMenuItem} from "./NavMenuItem/NavMenuItem";
 
 
@@ -33,7 +31,6 @@ function Header() {
 
 
             <div className={style.nav}>
-
                 <NavMenuItem
                     path="main"
                     title='Main'
@@ -59,10 +56,7 @@ function Header() {
             <div className={style.burger}>
                 <BurgerMenu/>
             </div>
-
         </div>
-
-
     </div>);
 }
 

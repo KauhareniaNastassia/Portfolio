@@ -1,10 +1,8 @@
 import style from './Project.module.scss'
 import Button from "../../../Common/Components/Button/Button";
-import Tilt from 'react-tilt'
 
 function Project(props) {
     return (
-
         <div className={style.project}>
             <div
                 className={style.image}
@@ -25,7 +23,6 @@ function Project(props) {
                 </a>
             </div>
         </div>
-
     );
 }
 

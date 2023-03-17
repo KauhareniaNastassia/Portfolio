@@ -22,11 +22,12 @@
     transform: rotate3d(1, 1, 1, 0deg) scale3d(1.05, 1.05, 1.05);
     animation: pulsate 3s ease-in-out;
   }
-  }
+}
+
 .successMessage {
-   background-color: #efdde1;
-   border: 1px solid #bd969c;
- }
+  background-color: #efdde1;
+  border: 1px solid #bd969c;
+}
 
 .errorMessage {
   background-color: #e04949;

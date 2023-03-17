@@ -82,7 +82,6 @@ export const ContactsForm = () => {
                                     placeholder=' '
                                     id='email'
                                     {...formik.getFieldProps('email')}
-
                                 />
                                 <label htmlFor='email'>E-mail</label>
                             </div>
@@ -96,7 +95,6 @@ export const ContactsForm = () => {
                             <div className={style.inputWrapper}>
                                 <textarea
                                     className={style.textarea}
-
                                     placeholder=' '
                                     id='message'
                                     {...formik.getFieldProps('message')}
@@ -105,8 +103,7 @@ export const ContactsForm = () => {
                             </div>
                             <span className={style.error}>
                                     {formik.touched.message && formik.errors.message}
-                                </span>
-
+                            </span>
                         </div>
 
                     </div>
@@ -118,7 +115,6 @@ export const ContactsForm = () => {
                     </button>
 
                     <div>
-
                         {error && <Notifications error={error}/>}
                     </div>
                 </form>}

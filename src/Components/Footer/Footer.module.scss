@@ -28,15 +28,12 @@
     @media(max-width: 570px) {
       font-size: 16px;
     }
-
-
   }
 
   .line {
     width: 30%;
     height: 3px;
     background-color: $textTitleColor;
-   // margin-left: 2rem;
     margin-right: auto;
     transform: scaleX(0.2);
     transform-origin: left;

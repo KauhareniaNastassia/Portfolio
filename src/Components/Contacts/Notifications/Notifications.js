@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import style from "./Notifications.module.scss";
 import Fade from 'react-reveal/Fade';
 

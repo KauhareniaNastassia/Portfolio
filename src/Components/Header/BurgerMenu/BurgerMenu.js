@@ -8,7 +8,6 @@ export const BurgerMenu = () => {
     const [showMenuBtn, setShowMenuBtn] = useState(false)
     const [popUpClose, setPopUpClose] = useState(true)
 
-
     const onClickOpenMenu = () => {
         setShowMenuBtn(!showMenuBtn)
         setPopUpClose(!popUpClose)
@@ -53,9 +52,7 @@ export const BurgerMenu = () => {
             </button>
 
             {!popUpClose &&
-
                 <div className={style.burger_popUp}>
-
                     <NavMenuItem
                         path="main"
                         title='Main'

@@ -26,14 +26,12 @@
         gap: 30px;
       }
       @media (max-width: 900px) {
-        //margin-left: 70px;
         justify-content: center;
       }
       @media (max-width: 800px) {
         margin-left: 0;
         justify-content: space-between;
       }
-
       @media (max-width: 580px) {
         justify-content: center;
         gap: 20px;

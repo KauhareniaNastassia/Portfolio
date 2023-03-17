@@ -12,9 +12,7 @@ function Contacts() {
             <Fade bottom>
                 <div className={style.mainBlock}>
 
-
                     <div className={style.messageBlock}>
-
                         <div className={style.message}>
                             <p>
                                 If you have any suggestion, project or even you want to say Hello... please fill out
@@ -30,7 +28,6 @@ function Contacts() {
                         <div className={style.callBlock}>
                             <span className={style.call}>Call me:</span><span>+375-29-67-37-963</span>
                         </div>
-
                     </div>
 
                     <div className={style.formBlock}>
@@ -40,6 +37,7 @@ function Contacts() {
                 </div>
             </Fade>
         </div>
+
         <Fade bottom>
             <Footer/>
         </Fade>

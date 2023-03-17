@@ -14,7 +14,6 @@
     width: 135px;
     height: 135px;
   }
-
   @media (max-width: 700px) {
     width: 130px;
     height: 130px;
@@ -116,7 +115,6 @@
     .icon {
       height: 70px;
       width: 70px;
-      //top: 21%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -145,12 +143,10 @@
       align-items: center;
       justify-content: center;
 
-
       h3 {
         transform-style: preserve-3d;
         transition: ease transform 2.3s, ease background 0.5s;
         transform: translateZ(-10px) rotatey(-180deg);
-        //margin-bottom: 55px;
         @include text($font, 22px, 1.2, 800);
         color: #ffffff;
 
@@ -162,7 +158,6 @@
         }
         @media (max-width: 500px) {
           font-size: 15px;
-         // margin-bottom:20px;
         }
       }
     }
