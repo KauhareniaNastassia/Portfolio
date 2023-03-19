@@ -16,7 +16,7 @@ export const ContactsForm = () => {
             email: '',
             message: ''
         },
-        validate: (values) => {     //валидация, обработка ошибок
+        validate: (values) => {
             const errors = {}
             if (!values.name) {
                 errors.name = 'Enter your name'
