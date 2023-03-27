@@ -5,6 +5,7 @@ import Title from "../../Common/Components/Title/Title";
 import todoImage from '../../Assets/Image/todolist.jpg'
 import socialImage from '../../Assets/Image/logoSocial.jpg'
 import cardsImage from '../../Assets/Image/cards.jpg'
+import libraryImage from '../../Assets/Image/library.jpg'
 import Fade from 'react-reveal/Fade';
 
 function Projects() {
@@ -18,7 +19,9 @@ function Projects() {
     const cards = {
         backgroundImage: `url(${cardsImage})`,
     }
-
+    const library = {
+        backgroundImage: `url(${libraryImage})`,
+    }
 
     return (
         <div id='projects' className={style.projectsBlock}>
@@ -27,6 +30,14 @@ function Projects() {
                 <div className={`${style.projectsContainer} ${projectsContainer.container}`}>
 
                     <div className={style.projects}>
+
+                        <Project
+                            style={library}
+                            title={"Library"}
+                            projectDescription={"Stack: React, Redux, Typescript, Redux-Thunk, React-Router-dom, Axois, Formik, Rest API"}
+                            link={'https://KauhareniaNastassia.github.io/Library'}
+                            codeLink={'https://github.com/KauhareniaNastassia/Library'}
+                        />
 
                         <Project
                             style={socialNetwork}

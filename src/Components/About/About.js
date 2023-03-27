@@ -18,12 +18,16 @@ function About() {
                     <div className={style.aboutContainer}>
                         <div className={style.leftBlock}>
                             <p>I am a front-end developer with huge interest in programming. I have
-                                an experience in creating SPA with React/Redux/ TypeScript in team. Now I am improving my
-                                skills in this direction and expanding them with new technologies. And also I have interest
-                                to learn React Native and Angular. I have an experience in design, I was studying UX/UI
-                                design.</p>
-                            <p>I spend my leisure time reading literature and articles about development, watching video
-                                tutorials on YouTube about React and JS.</p>
+                                an experience in creating SPA with
+                                React/Redux/ TypeScript in team.</p>
+                            <p>
+                                Now I am improving my skills in this direction and expanding them with new technologies,
+                                for example, I’m planning to learn Angular. I also have an experience in design, I was
+                                studing UX/UI design.
+                            </p>
+                            <p> I spend my leisure time reading literature and articles about development, watching
+                                video tutorials on YouTube about React and JS.
+                                Open for your suggestions.</p>
                         </div>
                         <div className={style.rightBlock}>
                             <ul>
