@@ -178,6 +178,27 @@
       flex-direction: column;
       gap: 50px;
 
+      &:before {
+        content: "";
+        position: absolute;
+        box-shadow: 0 0 12px rgba(252, 248, 249, 0.85);
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        z-index: 2;
+        transition: ease all 2.3s;
+        transform-style: preserve-3d;
+        transform: translateZ(0px);
+
+        @media (max-width: 500px) {
+          top: 10px;
+          left: 10px;
+          right: 10px;
+          bottom: 10px;
+        }
+      }
+
       .codeLink {
         text-decoration: none;
         @include text($font, 16px, 1.2, 500);
