@@ -18,6 +18,9 @@
       flex-wrap: wrap;
       gap: 30px;
 
+      @media (max-width: 1356px) {
+        gap: 30px;
+      }
       @media (max-width: 1000px) {
         gap: 20px;
       }

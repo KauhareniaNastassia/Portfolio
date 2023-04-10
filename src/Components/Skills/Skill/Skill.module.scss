@@ -2,119 +2,30 @@
 @import "src/Common/Styles/Mixins/Mixins";
 
 
-.wrapper {
-  position: relative;
-  width: 150px;
-  height: 150px;
-  margin: 10px 0;
-  transition: ease all 2.3s;
-  perspective: 1200px;
-
-  @media (max-width: 892px) {
-    width: 135px;
-    height: 135px;
-  }
-  @media (max-width: 700px) {
-    width: 130px;
-    height: 130px;
-  }
-  @media (max-width: 500px) {
-    width: 100px;
-    height: 100px;
-  }
-
-  &:hover .skill {
-    transform: rotateX(0deg) rotateY(-180deg);
-  }
-
-  &:hover .skill:before {
-    transform: translateZ(30px);
-  }
-
-  &:hover .skill:after {
-    background-color: #bd969c;
-  }
-
-  &:hover .skill .icon {
-    transform: translateZ(40px);
-  }
-
-  &:hover .skill h3 {
-    transform: translateZ(-60px) rotatey(-180deg);
-  }
-
   .skill {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    transform-style: preserve-3d;
-    transition: ease all 2.3s;
-    background-color: $backgroundColor;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    transition: ease all 0.7s;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 15px;
-    padding: 20px;
     box-sizing: border-box;
     border: 1px solid $lineColor;
 
-    &:before {
-      content: "";
-      position: absolute;
-      border: 5px solid rgba(255, 255, 255, 0.5);
-      box-shadow: 0 0 12px rgba(189, 150, 156, 0.85);
-      top: 20px;
-      left: 20px;
-      right: 20px;
-      bottom: 20px;
-      z-index: 2;
-      transition: ease all 2.3s;
-      transform-style: preserve-3d;
-      transform: translateZ(0px);
-
-      @media (max-width: 500px) {
-        top: 10px;
-        left: 10px;
-        right: 10px;
-        bottom: 10px;
-      }
+    &:hover {
+      background-color: #bd969c;
     }
-
-    &:after {
-      content: "";
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      right: 0px;
-      bottom: 0px;
-      z-index: 2;
-      transition: ease all 1.3s;
-      background: rgba(0, 0, 0, 0);
+    &:hover .icon {
+      filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(122deg) brightness(112%) contrast(101%);
     }
-
-
-    @media (max-width: 700px) {
-      width: 130px;
-      height: 130px;
-      padding: 5px;
-      margin-right: 20px;
-      margin-bottom: 10px;
-    }
-    @media (max-width: 500px) {
-      width: 100px;
-      height: 100px;
-      padding: 5px;
-      margin-right: 20px;
-      margin-bottom: 10px;
+    &:hover h3 {
+      color: #ffffff;
     }
 
     .icon {
-      height: 70px;
-      width: 70px;
+      height: 80px;
+      width: 80px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -122,7 +33,12 @@
       background-position: center;
       background-repeat: no-repeat;
       position: relative;
-      color: $textDescriptionColor;
+      margin-top: 10px;
+
+      @media (max-width: 892px) {
+        width: 60px;
+        height: 60px;
+      }
 
       @media (max-width: 700px) {
         width: 55px;
@@ -132,37 +48,30 @@
       }
     }
 
-    .cardBack {
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      transform-style: preserve-3d;
-      transition: ease all 2.3s;
-      transform: translateZ(-10px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    h3 {
+      @include text($font, 16px, 1.2, 800);
+      color: $textTitleColor;
 
-      h3 {
-        transform-style: preserve-3d;
-        transition: ease transform 2.3s, ease background 0.5s;
-        transform: translateZ(-10px) rotatey(-180deg);
-        @include text($font, 22px, 1.2, 800);
-        color: #ffffff;
-
-        @media (max-width: 892px) {
-          font-size: 20px;
-        }
-        @media (max-width: 700px) {
-          font-size: 17px;
-        }
-        @media (max-width: 500px) {
-          font-size: 15px;
-        }
+      @media (max-width: 892px) {
+        font-size: 20px;
+      }
+      @media (max-width: 700px) {
+        font-size: 17px;
+      }
+      @media (max-width: 500px) {
+        font-size: 15px;
       }
     }
+    @media (max-width: 892px) {
+      width: 135px;
+      height: 135px;
+    }
+    @media (max-width: 700px) {
+      width: 130px;
+      height: 130px;
+    }
   }
-}
+
 
 
 
