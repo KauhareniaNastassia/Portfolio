@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.0bda0be3.css",
+    "main.css": "/Portfolio/static/css/main.5000c351.css",
     "main.js": "/Portfolio/static/js/main.c4b632ac.js",
     "static/js/787.cd7d7d7f.chunk.js": "/Portfolio/static/js/787.cd7d7d7f.chunk.js",
     "static/media/Kauharenia_Nastassia.pdf": "/Portfolio/static/media/Kauharenia_Nastassia.223603ce8ed0766f502d.pdf",
@@ -26,12 +26,12 @@
     "static/media/css.svg": "/Portfolio/static/media/css.acd6e07c574e804678f136f21af6e271.svg",
     "index.html": "/Portfolio/index.html",
     "static/media/materialUI.svg": "/Portfolio/static/media/materialUI.41c6f4b8fef639b4e6c61c6c147c0811.svg",
-    "main.0bda0be3.css.map": "/Portfolio/static/css/main.0bda0be3.css.map",
+    "main.5000c351.css.map": "/Portfolio/static/css/main.5000c351.css.map",
     "main.c4b632ac.js.map": "/Portfolio/static/js/main.c4b632ac.js.map",
     "787.cd7d7d7f.chunk.js.map": "/Portfolio/static/js/787.cd7d7d7f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0bda0be3.css",
+    "static/css/main.5000c351.css",
     "static/js/main.c4b632ac.js"
   ]
 }
