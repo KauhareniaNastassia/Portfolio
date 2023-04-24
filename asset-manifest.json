@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.5000c351.css",
-    "main.js": "/Portfolio/static/js/main.c4b632ac.js",
+    "main.css": "/Portfolio/static/css/main.87339d72.css",
+    "main.js": "/Portfolio/static/js/main.ec2463e1.js",
     "static/js/787.cd7d7d7f.chunk.js": "/Portfolio/static/js/787.cd7d7d7f.chunk.js",
-    "static/media/Kauharenia_Nastassia.pdf": "/Portfolio/static/media/Kauharenia_Nastassia.223603ce8ed0766f502d.pdf",
+    "static/media/Nastassia_Kauharenia.pdf": "/Portfolio/static/media/Nastassia_Kauharenia.c08f8a0c570b07affe43.pdf",
     "static/media/logoSocial.jpg": "/Portfolio/static/media/logoSocial.606492976bc515acf68a.jpg",
     "static/media/todolist.jpg": "/Portfolio/static/media/todolist.b33689401ad5a21f644d.jpg",
     "static/media/myPhoto.jpg": "/Portfolio/static/media/myPhoto.01fc06cfb1f1afa7411a.jpg",
@@ -26,12 +26,12 @@
     "static/media/css.svg": "/Portfolio/static/media/css.acd6e07c574e804678f136f21af6e271.svg",
     "index.html": "/Portfolio/index.html",
     "static/media/materialUI.svg": "/Portfolio/static/media/materialUI.41c6f4b8fef639b4e6c61c6c147c0811.svg",
-    "main.5000c351.css.map": "/Portfolio/static/css/main.5000c351.css.map",
-    "main.c4b632ac.js.map": "/Portfolio/static/js/main.c4b632ac.js.map",
+    "main.87339d72.css.map": "/Portfolio/static/css/main.87339d72.css.map",
+    "main.ec2463e1.js.map": "/Portfolio/static/js/main.ec2463e1.js.map",
     "787.cd7d7d7f.chunk.js.map": "/Portfolio/static/js/787.cd7d7d7f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5000c351.css",
-    "static/js/main.c4b632ac.js"
+    "static/css/main.87339d72.css",
+    "static/js/main.ec2463e1.js"
   ]
 }
