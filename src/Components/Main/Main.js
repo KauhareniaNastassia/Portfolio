@@ -1,6 +1,6 @@
 import style from './Main.module.scss'
 import cvImg from "../../Assets/Image/resume.svg";
-import Nastassia_Kauharenia from '../../Assets/Image/Kauharenia_Nastassia.pdf'
+import Nastassia_Kauharenia from '../../Assets/Image/Nastassia_Kauharenia.pdf'
 import Particles from "react-tsparticles";
 import {loadFull} from "tsparticles";
 import {useCallback, useEffect, useRef} from "react";
@@ -8,6 +8,7 @@ import {particlesOptions} from "../../Common/Styles/ParticlesOptions";
 import ReactTypingEffect from 'react-typing-effect';
 import myPhoto from '../../Assets/Image/myPhoto.jpg'
 import {gsap} from 'gsap'
+
 
 
 function Main() {
@@ -54,16 +55,18 @@ function Main() {
 
         <div className={style.textAndDownloadWrapper}>
 
-            <div className={style.text} ref={element => {
-                leftElement = element
-            }}>
-                <span>Hi, there</span>
-                <h1>I am Nastassia Kauharenia</h1>
-                <ReactTypingEffect
-                    className={style.printedText}
-                    text='Frontend Developer'
-                />
-            </div>
+    <div className={style.text} ref={element => {
+        leftElement = element
+    }}>
+        <span>Hi, there</span>
+        <h1>I am Nastassia Kauharenia</h1>
+        <ReactTypingEffect
+            className={style.printedText}
+            text='Frontend Developer'
+        />
+    </div>
+
+
 
             <div className={style.downloadBlock} ref={element => {
                 rightElement = element
